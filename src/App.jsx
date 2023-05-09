@@ -1,6 +1,6 @@
 import { useRoutes } from 'react-router-dom'
 import routes from './routes'
-import './index.css'
+import './style/index.css'
 
 
 export default function App() {
