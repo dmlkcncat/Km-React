@@ -1,9 +1,25 @@
-import { Carousel } from "flowbite-react"
+import { Carousel } from "flowbite-react";
+import { useState, useEffect, useRef } from "react";
 
 const CCarousel = () => {
+  const [height, setHeight] = useState(100);
+
+  const itemRef = useRef();
+
+  useEffect(() => {
+    if (itemRef.current) {
+      const yValue = itemRef.current.getBoundingClientRect().y;
+      setHeight(window.innerHeight - yValue);
+    }
+  }, [itemRef]);
+
   return (
     <>
-      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96 relative w-full h-full">
+      <div
+        ref={itemRef}
+        className="relative w-full"
+        style={{ height: `${+height}px` }}
+      >
         <Carousel>
           <div className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white">
             Slide 1
@@ -17,6 +33,6 @@ const CCarousel = () => {
         </Carousel>
       </div>
     </>
-  )
-}
-export default CCarousel
+  );
+};
+export default CCarousel;
