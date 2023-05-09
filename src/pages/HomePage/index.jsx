@@ -1,7 +1,9 @@
+import CCarousel from "./Carousel"
+
 const index = () => {
   return (
     <>
-      <div>anasayfa</div>
+      <CCarousel/>
     </>
   )
 }
