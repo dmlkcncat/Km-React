@@ -10,7 +10,7 @@ const MainLayout = () => {
       >
         <Navbar />
           <div
-            className="flex-1 pr-8 pt-12"
+            className="flex-1 pt-12"
             style={{ backgroundColor: "#FFFFFF" }}
           >
             <Outlet />
