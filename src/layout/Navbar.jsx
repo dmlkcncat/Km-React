@@ -12,7 +12,7 @@ const NNavbar = () => {
           to="/navbars"
         >
           <img
-            src="../../public/img/logokarbil.jpg"
+            src="./img/logokarbil.jpg"
             className="mr-3 h-6 sm:h-9"
             style={{height:48}}
             alt="Flowbite Logo"
