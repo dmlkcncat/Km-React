@@ -12,8 +12,9 @@ const NNavbar = () => {
           to="/navbars"
         >
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
+            src="../../public/img/logokarbil.jpg"
             className="mr-3 h-6 sm:h-9"
+            style={{height:48}}
             alt="Flowbite Logo"
           />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
@@ -34,8 +35,9 @@ const NNavbar = () => {
           >
             Hakkımızda
           </Navbar.Link>
-          <Navbar.Link href="/navbars">Hizmetlerimiz</Navbar.Link>
-          <Navbar.Link href="/navbars">Ürünlerimiz</Navbar.Link>
+          <Navbar.Link href="/navbars">Hizmetler</Navbar.Link>
+          <Navbar.Link href="/navbars">Referanslar</Navbar.Link>
+          <Navbar.Link href="/navbars">SSS</Navbar.Link>
           <Navbar.Link href="/navbars">İletişim</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
