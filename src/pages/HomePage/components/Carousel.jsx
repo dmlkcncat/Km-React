@@ -1,37 +1,37 @@
-import { Carousel } from "flowbite-react"
-import { useState, useEffect, useRef } from "react"
+import { Carousel, Navbar } from "flowbite-react"
+import { useEffect } from "react"
+import { useAppDispatch } from "../../../store"
+import {
+  setNavbarClassic,
+  setNavbarTransparent,
+} from "../../../store/navbarSlice"
 
 const CCarousel = () => {
-  const [height, setHeight] = useState(100)
-
-  const itemRef = useRef()
+  const dispatch = useAppDispatch()
 
   useEffect(() => {
-    if (itemRef.current) {
-      const yValue = itemRef.current.getBoundingClientRect().y
-      setHeight(window.innerHeight - yValue)
+    dispatch(setNavbarTransparent())
+
+    return () => {
+      dispatch(setNavbarClassic())
     }
-  }, [itemRef])
+  }, [])
 
   return (
     <>
-      <div
-        ref={itemRef}
-        className="relative w-full"
-        style={{ height: `${+height}px` }}
-      >
+      <div className="relative w-full h-screen">
         <Carousel slide={true}>
           <img
             className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white"
-            src="https://fakeimg.pl/1920x1080"
+            src=""
           />
           <img
             className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white"
-            src="https://fakeimg.pl/1920x1080"
+            src=""
           />
           <img
             className="flex h-full items-center justify-center bg-gray-400 dark:bg-gray-700 dark:text-white"
-            src="https://fakeimg.pl/1920x1080"
+            src=""
           ></img>
         </Carousel>
       </div>
