@@ -55,3 +55,12 @@ export const getDate = () => dayjs().format('DD.MM.YYYY')
 export const hourFormat = (hour) => (hour < 10 ? '0' : '') + hour
 
 export const getHour = (date) => dayjs(date).format('HH')
+
+export function spliceIntoChunks(arr, chunkSize) {
+  const res = [];
+  while (arr.length > 0) {
+      const chunk = arr.splice(0, chunkSize);
+      res.push(chunk);
+  }
+  return res;
+}

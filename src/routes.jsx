@@ -1,10 +1,17 @@
 import { lazy, Suspense } from "react"
-import { Loading } from "./components/Loading"
+import { Loading } from "./components/LoadingSpinner"
+// import { LoadingSpinner } from "./components/LoadingSpinner"
 
 const MainLayout = lazy(() => import("./layout/MainLayout"))
 const HomePage = lazy(() => import("./pages/HomePage/index"))
 
-const ProductPage = lazy(() => import("./pages/Product/product"))
+const ProductPage = lazy(() => import("./pages/Product"))
+
+const AboutUsManagement = lazy(() => import("./pages/AboutUsManagement/index"))
+
+const ProcessesManagement = lazy(() => import("./pages/ProcessesManagement/index"))
+const DetailProcessesPage = lazy(() => import("./pages/ProcessesManagement/DetailProcessesPage"))
+
 
 /** @type {import('react-router-dom').RouteObject[]} */
 const routes = [
@@ -20,7 +27,7 @@ const routes = [
         lazy: true,
       },
       {
-        path: "product",
+        path: "urunler",
         name: "product",
         children: [
           {
@@ -31,6 +38,36 @@ const routes = [
           },
         ],
       },
+      {
+        path: "hakkımızda",
+        name: "aboutus",
+        children: [
+          {
+            index: true,
+            element: <AboutUsManagement />,
+            auth: true,
+            lazy: true,
+          },
+        ],
+      },
+      {
+        path: "hizmetler",
+        name: "processes",
+        children: [
+          {
+            index: true,
+            element: <ProcessesManagement />,
+            auth: true,
+            lazy: true,
+          },
+        ],
+      },
+      {
+        path: 'hizmetler/:id',
+        name: 'hizmetler',
+        element: <DetailProcessesPage />,
+        lazy: true,
+      }
     ],
   },
 ]

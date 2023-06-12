@@ -9,12 +9,12 @@ const MainLayout = () => {
         className="d-flex flex-column min-vh-100"
       >
         <Navbar />
-          <div
-            className="flex-1"
-            style={{ backgroundColor: "#FFFFFF" }}
-          >
-            <Outlet />
-          </div>
+        <div
+          className="flex-1"
+        style={{ backgroundColor: "#F7F7F7" }}
+        >
+          <Outlet />
+        </div>
 
         <Footer />
       </div>

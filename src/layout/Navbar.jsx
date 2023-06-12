@@ -1,6 +1,7 @@
 import classNames from "classnames"
 import { Navbar } from "flowbite-react"
 import { useAppSelector } from "../store"
+import { Link } from "react-router-dom"
 
 const NNavbar = () => {
   const { type } = useAppSelector((state) => state.navbarSlice)
@@ -11,74 +12,46 @@ const NNavbar = () => {
       <Navbar
         style={{ borderRadius: "none" }}
         className={classNames({
-          "z-10 absolute bg-transparent top-0 left-0 w-full":
+          "z-10 absolute bg-transparent top-0 left-0 w-full font-serif":
             type == "transparent",
-          "bg-black": type == "classic",
+          "bg-blue-500": type == "classic",
         })}
         fluid={true}
         rounded={false}
       >
-        <Navbar.Brand
-          // as={{
-          //   $$typeof: Symbol(react.forward_ref),
-          //   render: LinkWithRef,
-          // }}
-          to="/navbars"
-        >
+        <Navbar.Brand to="/navbars">
           <img
-            src="./img/logokarbil.jpg"
+            src="/img/karbillogo.png"
             className="mr-3 h-6 sm:h-9"
             style={{ height: 48 }}
-            alt="Flowbite Logo"
           />
-          <span
-            className="self-center whitespace-nowrap text-xl font-semibold text-white"
-            style={{ fontFamily: "Garamond, monospace " }}
-          >
-            KARBİL YAPI
-          </span>
+          <a href="/">
+            <span className="self-center whitespace-nowrap text-2xl font-semibold neon-blue-light">
+              KARBİL YAPI
+            </span>
+          </a>
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <Navbar.Link
-            href="/"
-            active={true}
-            style={{ color: "white", fontFamily: "Garamond, monospace " }}
-          >
-            Anasayfa
+          <Navbar.Link className="neon-blue-light" active={true}>
+            <Link to="/">Anasayfa</Link>
           </Navbar.Link>
-          <Navbar.Link
-            // as={{
-            //   $$typeof: Symbol(react.forward_ref),
-            //   render: LinkWithRef,
-            // }}
-            href="/hakkımızda"
-            style={{ color: "white", fontFamily: "Garamond, monospace " }}
-          >
-            Hakkımızda
+          <Navbar.Link className="neon-blue-light">
+            <Link to="/hakkımızda">Hakkımızda</Link>
           </Navbar.Link>
-          <Navbar.Link
-            href="#"
-            style={{ color: "white", fontFamily: "Garamond, monospace " }}
-          >
-            Hizmetler
+          <Navbar.Link className="neon-blue-light">
+            <Link to="/urunler">Ürünler</Link>
           </Navbar.Link>
-          <Navbar.Link
-            href="#"
-            style={{ color: "white", fontFamily: "Garamond, monospace " }}
-          >
+          <Navbar.Link className="neon-blue-light">
+            <Link to="/hizmetler">Hizmetler</Link>
+          </Navbar.Link>
+          <Navbar.Link className="neon-blue-light" to="#">
             Referanslar
           </Navbar.Link>
-          <Navbar.Link
-            href="#"
-            style={{ color: "white", fontFamily: "Garamond, monospace " }}
-          >
+          <Navbar.Link className="neon-blue-light" to="#">
             SSS
           </Navbar.Link>
-          <Navbar.Link
-            href="#"
-            style={{ color: "white", fontFamily: "Garamond, monospace " }}
-          >
+          <Navbar.Link className="neon-blue-light" to="#">
             İletişim
           </Navbar.Link>
         </Navbar.Collapse>
