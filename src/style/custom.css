@@ -12,37 +12,9 @@ navbar-element {
 }
 
 .button1:hover {
-    box-shadow: 0 0 10px 0 #31adff inset, 0 0 20px 2px #00caca;
-    border: 2px solid #005eb5;
+    box-shadow: 0 0 10px 0 #0a4770 inset, 0 0 20px 2px #0a4770;
+    border: 2px solid #0a4770;
 }
-
-/* @keyframes pulse-shrink {
-    to {
-        transform: scale(0.9);
-    }
-}
-
-.pulse-shrink {
-    display: flex;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-
-.pulse-shrink:hover {
-    animation-name: pulse-shrink;
-    animation-duration: 0.4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-} */
-
-/* .divider {
-    background-color: #ababab;
-    height: 2px;
-    width: 320px;
-    margin: auto;
-} */
 
 .divider {
     margin: auto;
@@ -98,31 +70,11 @@ navbar-element {
     opacity: 1;
 }
 
-/****** image hover ******/
-/* 
-.image-hover * {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box
-} */
-
 .image-hover {
-    /* position: relative; */
-    /* width: 450px; */
-    /* height: 200px; */
     display: inline-block;
     overflow: hidden;
     border-radius: 1%;
-    /* background: #fff; */
-    /* border: 10px solid #fff; */
-    /* box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3) */
 }
-
-/* .image-hover a {
-    text-decoration: none
-} */
 
 .image-hover img {
     margin: 0px 0px 0px 0px
@@ -166,4 +118,13 @@ navbar-element {
     100% {
         color: #7e0fff;
     }
+} 
+
+.size-a-2 {
+    width: 120px;
+    height: 3px;
 }
+
+.bg-3 {
+    background-color: #333;
+  }

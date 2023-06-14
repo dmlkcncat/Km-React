@@ -6,15 +6,15 @@ import { TbHomeCheck, TbHomeEdit } from "react-icons/tb"
 
 const Processes = () => {
   return (
-    <div style={{ width: "max content"}}>
+    <div style={{ width: "max content" }}>
       <Timeline horizontal>
         <Timeline.Item>
           <Timeline.Point icon={GoLocation} />
           <Timeline.Content>
             <Timeline.Body>
               <Card
-                className="mx-auto w-60 button1"
-                style={{ backgroundColor: "#000" }}
+                className="mx-auto w-60 button1 text-gray-700"
+                style={{ backgroundColor: "#dff2fb" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                 vitae leo quis sapien semper bibendum sed at urna. Vestibulum
@@ -29,8 +29,8 @@ const Processes = () => {
           <Timeline.Content>
             <Timeline.Body>
               <Card
-                className="mx-auto w-60 button1"
-                style={{ backgroundColor: "#000" }}
+                className="mx-auto w-60 button1 text-gray-700"
+                style={{ backgroundColor: "#dff2fb" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                 vitae leo quis sapien semper bibendum sed at urna. Vestibulum
@@ -49,8 +49,8 @@ const Processes = () => {
           <Timeline.Content>
             <Timeline.Body>
               <Card
-                className="mx-auto w-60 button1"
-                style={{ backgroundColor: "#000" }}
+                className="mx-auto w-60 button1 text-gray-700"
+                style={{ backgroundColor: "#dff2fb" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                 vitae leo quis sapien semper bibendum sed at urna. Vestibulum
@@ -67,8 +67,8 @@ const Processes = () => {
           <Timeline.Content>
             <Timeline.Body>
               <Card
-                className="mx-auto w-60 button1"
-                style={{ backgroundColor: "#000" }}
+                className="mx-auto w-60 button1 text-gray-700"
+                style={{ backgroundColor: "#dff2fb" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                 vitae leo quis sapien semper bibendum sed at urna. Vestibulum
@@ -83,8 +83,8 @@ const Processes = () => {
           <Timeline.Content>
             <Timeline.Body>
               <Card
-                className="mx-auto w-60 button1"
-                style={{ backgroundColor: "#000" }}
+                className="mx-auto w-60 button1 text-gray-700"
+                style={{ backgroundColor: "#dff2fb" }}
               >
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
                 vitae leo quis sapien semper bibendum sed at urna. Vestibulum

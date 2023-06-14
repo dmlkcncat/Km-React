@@ -8,8 +8,8 @@ const TitleCard = () => {
         width: "100%",
       }}
     >
-      <div class="container">
-        <div class="row">
+      <div className="container">
+        <div className="row">
           <div>
             <h1>Hakkımızda </h1>
             <p>Karbil Yapı Tarihçe ve Kalite Politikası .</p>

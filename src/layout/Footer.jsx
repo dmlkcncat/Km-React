@@ -7,7 +7,6 @@ const FFooter = () => {
       <Footer
         style={{ backgroundColor: "#D8DCD6" }}
         container={true}
-        rounded={false}
       >
         <div className="w-full">
           <div>

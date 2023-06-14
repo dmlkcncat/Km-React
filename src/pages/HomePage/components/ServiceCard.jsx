@@ -80,6 +80,7 @@ const ServiceCard = () => {
     },
   ]
 
+
   return (
     <div className="h-64 sm:h-64 xl:h-80 2xl:h-96">
       <Carousel slide={false}>
@@ -103,8 +104,8 @@ const ServiceCard = () => {
                 >
                   {item.name}
                 </h5>
-                <Button className="mx-auto" color="gray" pill>
-                  detay
+                <Button className="mx-auto" gradientMonochrome="info" pill>
+                  Detay
                 </Button>
               </Card>
             ))}

@@ -1,14 +1,12 @@
-import { Card } from "flowbite-react"
+import React from 'react';
+import { BeforeAfter } from 'react-simple-before-after'
 
 const ArtAfterBefore = () => {
   return (
-    <Card>
-      <img
-        className="h-60 items-center"
-        src=""
-        alt=""
-      />
-    </Card>
+    <BeforeAfter
+      beforeImage='https://fakeimg.pl/600x400'
+      afterImage='https://fakeimg.pl/600x400'
+    />
   )
 }
 export default ArtAfterBefore

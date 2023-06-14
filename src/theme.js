@@ -72,7 +72,7 @@ export default {
             icon: {
               base: "h-4 w-4 text-red-50",
               wrapper:
-                "absolute -left-3 flex h-8 w-8 items-center justify-center rounded-full bg-[#18181B] dark:bg-cyan-900 dark:ring-gray-900",
+                "absolute -left-3 flex h-8 w-8 items-center justify-center rounded-full bg-blue-500 dark:bg-cyan-900 dark:ring-gray-900",
             },
           },
         },

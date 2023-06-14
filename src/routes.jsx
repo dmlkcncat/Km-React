@@ -9,6 +9,8 @@ const ProductPage = lazy(() => import("./pages/Product"))
 
 const AboutUsManagement = lazy(() => import("./pages/AboutUsManagement/index"))
 
+const ContactPageManagement = lazy(() => import("./pages/ContactPageManagement/index"))
+
 const ProcessesManagement = lazy(() => import("./pages/ProcessesManagement/index"))
 const DetailProcessesPage = lazy(() => import("./pages/ProcessesManagement/DetailProcessesPage"))
 
@@ -66,6 +68,12 @@ const routes = [
         path: 'hizmetler/:id',
         name: 'hizmetler',
         element: <DetailProcessesPage />,
+        lazy: true,
+      },
+      {
+        path: 'iletisim',
+        name: 'iletisim',
+        element: <ContactPageManagement />,
         lazy: true,
       }
     ],

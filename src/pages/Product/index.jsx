@@ -165,8 +165,8 @@ const index = () => {
           <p className="p-2">Ürünler</p>
           <div className="grid grid-cols-3 gap-3">
             {urun.map((item) => (
-              <Card key={index} className="max-w-md">
-                <h5 className="mb-3 text-base font-semibold text-gray-700 dark:text-white lg:text-xl">
+              <Card key={index} className="max-w-md companies-card">
+                <h5 className="mb-3 text-center font-semibold text-gray-700 dark:text-white lg:text-xl">
                   {item.urunadi}
                 </h5>
                 <div className="image-hover img-zoom-in">
@@ -204,33 +204,33 @@ const index = () => {
             </div>
             {/** Option Count */}
             <div>Kat sayısı</div>
-            <div class="flex">
-              <div class="flex items-center mr-4">
+            <div className="flex">
+              <div className="flex items-center mr-4">
                 <input
                   id="inline-radio"
                   type="radio"
                   value="0"
                   name="inline-radio-group"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
                   for="inline-radio"
-                  class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   Tek Katlı
                 </label>
               </div>
-              <div class="flex items-center mr-4">
+              <div className="flex items-center mr-4">
                 <input
                   id="inline-2-radio"
                   type="radio"
                   value="1"
                   name="inline-radio-group"
-                  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                  className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                 />
                 <label
                   for="inline-2-radio"
-                  class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                 >
                   Çift Katlı
                 </label>
@@ -264,8 +264,11 @@ const index = () => {
                 required
               />
             </div>
-            <Button className="" outline pill>
-              <HiOutlineArrowRight className="h-6 w-6" />
+            <Button gradientDuoTone="cyanToBlue" outline>
+              <p>Devam</p>
+              <span>
+                <HiOutlineArrowRight className="h-6 w-6 ml-1" />
+              </span>
             </Button>
           </Card>
         </div>

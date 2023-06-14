@@ -17,7 +17,6 @@ const NNavbar = () => {
           "bg-blue-500": type == "classic",
         })}
         fluid={true}
-        rounded={false}
       >
         <Navbar.Brand to="/navbars">
           <img
@@ -45,14 +44,10 @@ const NNavbar = () => {
           <Navbar.Link className="neon-blue-light">
             <Link to="/hizmetler">Hizmetler</Link>
           </Navbar.Link>
-          <Navbar.Link className="neon-blue-light" to="#">
-            Referanslar
-          </Navbar.Link>
-          <Navbar.Link className="neon-blue-light" to="#">
-            SSS
-          </Navbar.Link>
-          <Navbar.Link className="neon-blue-light" to="#">
-            İletişim
+          <Navbar.Link className="neon-blue-light">Referanslar</Navbar.Link>
+          <Navbar.Link className="neon-blue-light">SSS</Navbar.Link>
+          <Navbar.Link className="neon-blue-light">
+            <Link to="/iletisim">İletişim</Link>
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>

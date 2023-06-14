@@ -23,7 +23,7 @@ const index = () => {
       <div className="px-20 py-5">
         <ServiceCard />
       </div>
-      <p className="text-center text-3xl font-bold p-2 text-yellow-700">
+      <p className="text-center text-3xl font-bold p-2">
         Süreçler
       </p>
       {/* <div className="divider"></div> */}
@@ -33,7 +33,6 @@ const index = () => {
           style={{
             display: "flex",
             justifyContent: "center",
-            // boxSizing: "border-box",
           }}
         >
           <Processes />
