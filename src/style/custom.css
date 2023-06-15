@@ -35,16 +35,18 @@ navbar-element {
 
 }
 
+/** navbar text */
+
 .neon-blue-light {
-    color: #fbfeff;
-    text-shadow: 0 0 0.125em #fbfeff, 0 0 0.25em #080cfb;
+    color: #02479c;
+    text-shadow: 0 0 0.125em #ffffff, 0 0 0.25em #ededed;
     transition: text-shadow ease-in .1s, color ease-in .1s;
 }
 
 
 .neon-blue-light:hover {
     color: #1307f4;
-    text-shadow: 0 0 0.25em #08dbfb, 0 0 0.5em #fbfeff;
+    text-shadow: 0 0 0.25em #efefef, 0 0 0.5em #fbfeff;
     cursor: pointer;
 }
 
@@ -108,7 +110,7 @@ navbar-element {
 
 @keyframes textColor {
     0% {
-        color: #7e0fff;
+        color: #002072;
     }
 
     50% {

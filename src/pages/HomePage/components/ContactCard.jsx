@@ -5,15 +5,12 @@ import { FiMessageCircle } from "react-icons/fi"
 
 const ContactCard = () => {
   return (
-    <div className="flex flex-wrap gap-2">
-      <div className="flex-1 px-20">
-        <ArtAfterBefore />
-      </div>
-      <div className="flex-none">
-        <Card className="shadow-2xl max-w-sm" style={{ backgroundColor: "#f1f0ff" }}>
-          <form className="flex flex-col gap-2">
+    <div className="flex gap-2">
+      <Card className="mx-auto w-full">
+        <div className="items-center justify-center space-y-4 sm:flex sm:space-x-4 sm:space-y-0">
+          <form className="flex flex-col gap-2 w-full">
             <div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-3 gap-3 w-full">
                 <div>
                   <div className="mb-2 flex mx-auto items-center gap-1">
                     <BsPerson />
@@ -36,10 +33,6 @@ const ContactCard = () => {
                   </div>
                   <TextInput id="email1" type="email1" required={true} />
                 </div>
-              </div>
-            </div>
-            <div>
-              <div>
                 <div>
                   <div className="mb-2 flex items-center gap-1">
                     <FiMessageCircle />
@@ -55,30 +48,32 @@ const ContactCard = () => {
             </div>
             <div>
               <div>
-                <div>
-                  <div className="mb-2 flex items-center gap-1">
-                    <FiMessageCircle />
-                    <Label
-                      htmlFor="name"
-                      value="Mesaj"
-                      style={{ color: "#290e7e" }}
-                    />
-                  </div>
-                  <Textarea id="name" type="text" required={true} />
+                <div className="mb-2 flex items-center gap-1">
+                  <FiMessageCircle />
+                  <Label
+                    htmlFor="name"
+                    value="Mesaj"
+                    style={{ color: "#290e7e" }}
+                  />
                 </div>
+                <Textarea id="name" type="text" required={true} />
               </div>
             </div>
-            <Button
-              gradientDuoTone="greenToBlue"
-              outline
-            >
-              <p>
-                Gönder
-              </p>
-            </Button>
+            <div className="flex justify-center">
+              <Button
+                className="max-w-sm"
+                gradientDuoTone="greenToBlue"
+                outline
+              >
+                <p>
+                  Gönder
+                </p>
+              </Button>
+            </div>
+
           </form>
-        </Card>
-      </div>
+        </div>
+      </Card>
     </div>
   )
 }

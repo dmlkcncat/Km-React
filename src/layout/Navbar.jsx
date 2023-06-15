@@ -4,28 +4,28 @@ import { useAppSelector } from "../store"
 import { Link } from "react-router-dom"
 
 const NNavbar = () => {
-  const { type } = useAppSelector((state) => state.navbarSlice)
-  console.log({ type })
+  // const { type } = useAppSelector((state) => state.navbarSlice)
+  // console.log({ type })
 
   return (
     <>
       <Navbar
-        style={{ borderRadius: "none" }}
-        className={classNames({
-          "z-10 absolute bg-transparent top-0 left-0 w-full font-serif":
-            type == "transparent",
-          "bg-blue-500": type == "classic",
-        })}
+        style={{ borderRadius: "none", backgroundColor:"white" }}
+        // className={classNames({
+        //   "z-10 absolute bg-transparent top-0 left-0 w-full font-serif":
+        //     type == "transparent",
+        //   "bg-blue-500": type == "classic",
+        // })}
         fluid={true}
       >
         <Navbar.Brand to="/navbars">
           <img
-            src="/img/karbillogo.png"
+            src="/img/karbilyapi.png"
             className="mr-3 h-6 sm:h-9"
-            style={{ height: 48 }}
+            style={{ height: 60 }}
           />
           <a href="/">
-            <span className="self-center whitespace-nowrap text-2xl font-semibold neon-blue-light">
+            <span className="self-center whitespace-nowrap text-2xl font-bold neon-blue-light">
               KARBİL YAPI
             </span>
           </a>
@@ -36,7 +36,7 @@ const NNavbar = () => {
             <Link to="/">Anasayfa</Link>
           </Navbar.Link>
           <Navbar.Link className="neon-blue-light">
-            <Link to="/hakkımızda">Hakkımızda</Link>
+            <Link to="/">Hakkımızda</Link>
           </Navbar.Link>
           <Navbar.Link className="neon-blue-light">
             <Link to="/urunler">Ürünler</Link>
@@ -47,7 +47,7 @@ const NNavbar = () => {
           <Navbar.Link className="neon-blue-light">Referanslar</Navbar.Link>
           <Navbar.Link className="neon-blue-light">SSS</Navbar.Link>
           <Navbar.Link className="neon-blue-light">
-            <Link to="/iletisim">İletişim</Link>
+            <Link to="/">İletişim</Link>
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
