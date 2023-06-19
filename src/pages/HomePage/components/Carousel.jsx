@@ -2,21 +2,22 @@ import { Autoplay } from "swiper"
 import { Swiper, SwiperSlide } from "swiper/react"
 
 const CCarousel = () => {
+  // .custom-container {
+  //   height: 75vh; /* Ekran yüksekliğinin 3/4'ü */
+  //   max-height: 100vh; /* Maksimum yükseklik ekran yüksekliği kadar */
+  // }
 
   return (
     <>
       <div className="relative w-full h-full">
         <Swiper
-          modules={[
-            Autoplay,
-            
-          ]}
-          // spaceBetween={50}
+          modules={[Autoplay]}
+          navigation
           slidesPerView={1}
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
           autoplay={{
-            delay: 3000,
+            delay: 4000,
           }}
         >
           <SwiperSlide>
@@ -49,7 +50,7 @@ const CCarousel = () => {
           </SwiperSlide>
           <SwiperSlide>
             <section
-              class="bg-center bg-no-repeat bg-cover bg-[url('https://img.freepik.com/free-photo/hand-presenting-model-house-home-loan-campaign_53876-104970.jpg?w=1060&t=st=1686834803~exp=1686835403~hmac=20b085bae3750e4ca640807df503676f17fa3e839ac424b984b7233c9c71e3c2')] bg-gray-600 bg-blend-multiply"
+              class="bg-center bg-no-repeat bg-cover bg-[url('https://img.freepik.com/free-photo/real-estate-agent-with-house-model-keys_1150-17813.jpg?w=1060&t=st=1686924560~exp=1686925160~hmac=0e45ee426eb4a2f679681623f7438dc10ce7fc4e34270b5c9336eb244726e6e3')] bg-gray-600 bg-blend-multiply"
             >
               <div class="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
                 <h2 class="mb-4 text-2xl font-bold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">İSTER ANAHTAR TESLİM, İSTER İLERİ KABA TÜRKİYENİN HER YERİNE HİZMET VERMEKTEYİZ..</h2>

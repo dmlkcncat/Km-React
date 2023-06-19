@@ -20,12 +20,12 @@ const NNavbar = () => {
       >
         <Navbar.Brand to="/navbars">
           <img
-            src="/img/karbilyapi.png"
+            src="/img/karbillogo.png"
             className="mr-3 h-6 sm:h-9"
             style={{ height: 60 }}
           />
           <a href="/">
-            <span className="self-center whitespace-nowrap text-2xl font-bold neon-blue-light">
+            <span className="self-center whitespace-nowrap text-2xl font-bold text-[#60a3cf] neon-blue-light">
               KARBİL YAPI
             </span>
           </a>
@@ -44,8 +44,6 @@ const NNavbar = () => {
           <Navbar.Link className="neon-blue-light">
             <Link to="/hizmetler">Hizmetler</Link>
           </Navbar.Link>
-          <Navbar.Link className="neon-blue-light">Referanslar</Navbar.Link>
-          <Navbar.Link className="neon-blue-light">SSS</Navbar.Link>
           <Navbar.Link className="neon-blue-light">
             <Link to="/">İletişim</Link>
           </Navbar.Link>

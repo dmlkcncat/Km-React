@@ -1,54 +1,78 @@
 import { Footer } from "flowbite-react"
 import { BsFacebook, BsInstagram, BsTwitter } from "react-icons/bs"
+import { SlLocationPin } from "react-icons/sl"
 
 const FFooter = () => {
   return (
     <>
       <Footer
-        style={{ backgroundColor: "#D8DCD6" }}
-        container={true}
+        style={{ borderRadius: "none", backgroundColor: "white" }}
       >
         <div className="w-full">
           <div>
-            <img className="mx-auto w-16" src="/img/karbillogo.png" alt="" />
-            {/* <span>Karbil Yapı</span> */}
+            <img className="mx-auto w-20" src="/img/karbillogo.png" alt="" />
           </div>
-          <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
+          <div className="grid w-full grid-cols-2 gap-5 px-6 py-8 md:grid-cols-4">
             <div>
+              <Footer.Title title="Hızlı Menü" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">
+                  Anasayfa
+                </Footer.Link>
+                <Footer.Link href="#">
+                  Hakkımızda
+                </Footer.Link>
+                <Footer.Link href="#">
+                  İletişim
+                </Footer.Link>
+                <Footer.Link href="#">
+                  Ürünler
+                </Footer.Link>
+              </Footer.LinkGroup>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
-              <div>
-                <Footer.Title title="Hakkımızda" />
-                <Footer.LinkGroup col={true}>
-                  <Footer.Link href="#">Misyon</Footer.Link>
-                  <Footer.Link href="#">Hedeflerimiz</Footer.Link>
-                  <Footer.Link href="#">Neler Üretiyoruz?</Footer.Link>
-                </Footer.LinkGroup>
-              </div>
-              <div>
-                <Footer.Title title="REFERANSLAR" />
-                <Footer.LinkGroup col={true}>
-                  <Footer.Link href="#"> Projeler</Footer.Link>
-                  <Footer.Link href="#">Devam Eden Projeler</Footer.Link>
-                  <Footer.Link href="#">İl Bazlı Projeler</Footer.Link>
-                </Footer.LinkGroup>
-              </div>
-              <div>
-                <Footer.Title title="Bize Ulaşın" />
-                <Footer.LinkGroup col={true}>
-                  <Footer.Link href="#">Facebook</Footer.Link>
-                  <Footer.Link href="#">İnstagram</Footer.Link>
-                  <Footer.Link href="#">Twitter</Footer.Link>
-                </Footer.LinkGroup>
-              </div>
+            <div>
+              <Footer.Title title="Projeler" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">
+                  Kızılcapınar - 113 M2
+                </Footer.Link>
+                <Footer.Link href="#">
+                  Hamzavakıflı - 141 M2
+                </Footer.Link>
+                <Footer.Link href="#">
+                  Keşkek - 90 M2
+                </Footer.Link>
+                <Footer.Link href="#">
+                  Seyfetler - 89 M2
+                </Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="İletişim" />
+              <Footer.LinkGroup col>
+                <Footer.Link>
+                  <SlLocationPin />
+                  <span>
+                    Ören Mah. Hüseyin İbrahim İzmirli Sok.
+                    No:159 KDZ EREĞLİ /ZONGULDAK
+                  </span>
+                </Footer.Link>
+                <Footer.Link href="#">
+                  Android
+                </Footer.Link>
+                <Footer.Link href="#">
+                  Windows
+                </Footer.Link>
+                <Footer.Link href="#">
+                  MacOS
+                </Footer.Link>
+              </Footer.LinkGroup>
             </div>
           </div>
-          <Footer.Divider />
-          <div className="w-full sm:flex sm:items-center sm:justify-between">
+          <div className="w-full bg-gray-200 px-4 py-6 sm:flex sm:items-center sm:justify-between">
             <Footer.Copyright
-              className="font-bold"
-              href="https://kobizon.com.tr/"
-              by="Kobizon PDM"
+              by="KOBİZON PDM"
+              href="#"
               year={2023}
             />
             <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">

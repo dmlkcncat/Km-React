@@ -7,8 +7,9 @@ import {
   TextInput,
 } from "flowbite-react"
 import { useState, useEffect } from "react"
-import { MdArrowUpward } from "react-icons/md"
+// import { MdArrowUpward } from "react-icons/md"
 import { HiOutlineArrowRight } from "react-icons/hi"
+import ScrollToTop from "../../components/ScrollToTop"
 
 const index = () => {
   const urun = [
@@ -126,41 +127,42 @@ const index = () => {
     },
   ]
 
-  const [isVisible, setIsVisible] = useState(false)
+  // const [isVisible, setIsVisible] = useState(false)
 
-  const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true)
-    } else {
-      setIsVisible(false)
-    }
-  }
+  // const toggleVisibility = () => {
+  //   if (window.scrollY > 300) {
+  //     setIsVisible(true)
+  //   } else {
+  //     setIsVisible(false)
+  //   }
+  // }
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    })
-  }
+  // const scrollToTop = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   })
+  // }
 
-  useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility)
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility)
-    }
-  }, [])
+  // useEffect(() => {
+  //   window.addEventListener("scroll", toggleVisibility)
+  //   return () => {
+  //     window.removeEventListener("scroll", toggleVisibility)
+  //   }
+  // }, [])
 
   return (
     <div className="p-5">
       <div className="flex flex-row gap-4">
-        <div
+        {/* <div
           className={`scroll-to-top ${isVisible ? "show" : ""}`}
           onClick={scrollToTop}
         >
           <span>
             <MdArrowUpward />
           </span>
-        </div>
+        </div> */}
+        <ScrollToTop />
         <div className="flex-1 px-10">
           <p className="p-2">Ürünler</p>
           <div className="grid grid-cols-3 gap-3">
