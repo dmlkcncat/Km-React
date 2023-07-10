@@ -1,69 +1,65 @@
-import { useState, useEffect } from "react"
-import { Autoplay, Controller, Pagination } from "swiper"
-import { Swiper, SwiperSlide } from "swiper/react"
-import { ProductService } from "../../../services"
-
-
 const Product = () => {
-  const [items, setItems] = useState(false)
-
-  useEffect(() => {
-    ProductService.getAll().then((res) => {
-      setItems(res.data)
-      console.log(setItems);
-    })
-  }, [])
-
-  const [controlledSwiper, setControlledSwiper] = useState(null)
   return (
     <>
-      <section
-        className="bg-12 p-t-92 p-b-60"
-      >
-        <div>
-          <div className="flex-col-c-c p-b-50 py-3">
-          </div>
-          {items && items.map((x) => (
-            <Swiper
-              modules={[Pagination, Controller, Autoplay]}
-              slidesPerView={4}
-              spaceBetween={20}
-              pagination={{ clickable: true }}
-              autoplay={{
-                delay: 3000,
-              }}
-              controller={{ control: controlledSwiper }}
-              onSwiper={setControlledSwiper}
-            >
-              {/* {items.map((item) => (
-              <SwiperSlide key={item.id}>
-                <Card
-                  className="row justify-content-center py-3"
-                  rel="pulse-shrink"
-                  style={{ margin: "10% 0" }}
-                >
-                  <a>
-                    <img
-                      className="rounded-circle w-100"
-                      style={{ objectFit: "contain" }}
-                      src={item.firstImage}
-                      width={"100 %"}
-                    />
-                    <p>{item.name}</p>
-                  </a>
-                </Card>
-              </SwiperSlide>
-            ))} */}
-              <SwiperSlide key={x?.id}>
-                <p>{x?.name}</p>
-              </SwiperSlide>
-            </Swiper>
-          ))}
-
+      <section className="bg-slate-100">
+        <div className="p-3"></div>
+        <div className="text-center text-4xl font-extrabold text-teal-900">
+          Son Projelerimiz
         </div>
+        <div className="p-6"></div>
+        <div>
+          <section className="cards-animation items-center mx-auto">
+            <article className="card-animation card--1">
+              <div className="card__img"></div>
+              <a className="card_link">
+                <div className="card__img--hover"></div>
+              </a>
+              <div className="card__info">
+                <span className="card__category">
+                  220 M2 Çelik Konstrüksiyon
+                </span>
+                <h3 className="card__title"></h3>
+                <span className="card__by">Düzce</span>
+              </div>
+            </article>
+
+            <article className="card-animation card--2">
+              <div className="card__img"></div>
+              <a className="card_link">
+                <div className="card__img--hover"></div>
+              </a>
+              <div className="card__info">
+                <span className="card__category">
+                  253 M2 DUBLEKS Çelik Konstrüksiyon
+                </span>
+                <h3 className="card__title"></h3>
+                <span className="card__by">Ereğli</span>
+              </div>
+            </article>
+
+            <article className="card-animation card--3">
+              <div className="card__img"></div>
+              <a className="card_link">
+                <div className="card__img--hover"></div>
+              </a>
+              <div className="card__info">
+                <span className="card__category">
+                  121 M2 DUBLEKS Çelik Konstrüksiyon
+                </span>
+                <h3 className="card__title"></h3>
+                <span className="card__by">Ereğli</span>
+              </div>
+            </article>
+          </section>
+          <a href="">
+            <div className="text-center py-6 text-teal-900">
+              Tüm Projeleri Görüntüle
+            </div>
+          </a>
+        </div>
+        <div className="p-10"></div>
       </section>
     </>
   )
 }
 export default Product
-

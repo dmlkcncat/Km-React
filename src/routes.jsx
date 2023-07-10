@@ -9,11 +9,16 @@ const ProductPage = lazy(() => import("./pages/Product"))
 
 const AboutUsManagement = lazy(() => import("./pages/AboutUsManagement/index"))
 
-const ContactPageManagement = lazy(() => import("./pages/ContactPageManagement/index"))
+const ContactPageManagement = lazy(() =>
+  import("./pages/ContactPageManagement/index")
+)
 
-const ProcessesManagement = lazy(() => import("./pages/ProcessesManagement/index"))
-const DetailProcessesPage = lazy(() => import("./pages/ProcessesManagement/DetailProcessesPage"))
-
+const ProcessesManagement = lazy(() =>
+  import("./pages/ProcessesManagement/index")
+)
+const DetailProcessesPage = lazy(() =>
+  import("./pages/ProcessesManagement/DetailProcessesPage")
+)
 
 /** @type {import('react-router-dom').RouteObject[]} */
 const routes = [
@@ -24,6 +29,7 @@ const routes = [
       {
         index: true,
         name: "homepage",
+        label: "Anasayfa",
         element: <HomePage />,
         auth: true,
         lazy: true,
@@ -31,6 +37,7 @@ const routes = [
       {
         path: "urunler",
         name: "product",
+        label: "Ürünler",
         children: [
           {
             index: true,
@@ -43,6 +50,7 @@ const routes = [
       {
         path: "hakkımızda",
         name: "aboutus",
+        label: "Hakkımızda",
         children: [
           {
             index: true,
@@ -55,6 +63,7 @@ const routes = [
       {
         path: "hizmetler",
         name: "processes",
+        label: "Hizmetler",
         children: [
           {
             index: true,
@@ -65,17 +74,19 @@ const routes = [
         ],
       },
       {
-        path: 'hizmetler/:id',
-        name: 'hizmetler',
+        path: "hizmetler/:id",
+        name: "hizmetler",
+        label: "Hizmetler Detay",
         element: <DetailProcessesPage />,
         lazy: true,
       },
       {
-        path: 'iletisim',
-        name: 'iletisim',
+        path: "iletisim",
+        name: "iletisim",
+        label: "İletişim",
         element: <ContactPageManagement />,
         lazy: true,
-      }
+      },
     ],
   },
 ]

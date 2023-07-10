@@ -65,7 +65,7 @@ export default {
           root: {
             base: "mt-6 sm:pr-8",
           },
-          body: "mb-4 text-base font-normal text-gray-200 dark:text-gray-400",
+          body: "mb-4 text-between font-normal text-gray-500 dark:text-gray-400",
         },
         point: {
           marker: {

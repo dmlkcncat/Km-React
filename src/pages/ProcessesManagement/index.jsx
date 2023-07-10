@@ -5,6 +5,7 @@ import { useEffect, useState } from "react"
 import { getPath } from "../../utils"
 import { Loading } from "../../components/LoadingSpinner"
 import { MdArrowUpward } from "react-icons/md"
+import BBreadCrumb from "../../components/BreadCrumb"
 
 const index = () => {
   const [loading, setLoading] = useState(true)
@@ -52,7 +53,7 @@ const index = () => {
           </span>
         </div>
         <div className="flex-1">
-          <p className="p-2">Hizmetlerimiz</p>
+          {/* <BBreadCrumb /> */}
           {loading ? (
             <Loading />
           ) : (

@@ -1,102 +1,85 @@
-import { Card, Timeline } from "flowbite-react"
-import { GoLocation } from "react-icons/go"
-import { BsSearch } from "react-icons/bs"
-import { GiPencilRuler } from "react-icons/gi"
-import { TbHomeCheck, TbHomeEdit } from "react-icons/tb"
+import { Timeline } from "flowbite-react"
+import { HiCalendar } from "react-icons/hi"
 
 const Processes = () => {
-  return (
-    <div style={{ width: "max content" }}>
-      <Timeline horizontal>
-        <Timeline.Item>
-          <Timeline.Point icon={GoLocation} />
-          <Timeline.Content>
-            <Timeline.Body>
-              <Card
-                className="mx-auto w-60 button1 text-gray-700"
-                style={{ backgroundColor: "#dff2fb" }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                vitae leo quis sapien semper bibendum sed at urna. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere
-                cubilia curae; Nullam et aliquam tortor, a bibendum quam.
-              </Card>
-            </Timeline.Body>
-          </Timeline.Content>
-        </Timeline.Item>
-        <Timeline.Item>
-          <Timeline.Point icon={BsSearch} />
-          <Timeline.Content>
-            <Timeline.Body>
-              <Card
-                className="mx-auto w-60 button1 text-gray-700"
-                style={{ backgroundColor: "#dff2fb" }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                vitae leo quis sapien semper bibendum sed at urna. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere
-                cubilia curae; Nullam et aliquam tortor, a bibendum quam. Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae
-                leo quis sapien semper bibendum sed at urna. Vestibulum ante
-                ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                curae; Nullam et aliquam tortor, a bibendum quam.
-              </Card>
-            </Timeline.Body>
-          </Timeline.Content>
-        </Timeline.Item>
-        <Timeline.Item>
-          <Timeline.Point icon={GiPencilRuler} />
-          <Timeline.Content>
-            <Timeline.Body>
-              <Card
-                className="mx-auto w-60 button1 text-gray-700"
-                style={{ backgroundColor: "#dff2fb" }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                vitae leo quis sapien semper bibendum sed at urna. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere
-                cubilia curae; Nullam et aliquam tortor, a bibendum quam.Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae
-                leo quis sapien semper bibendum sed at urna.
-              </Card>
-            </Timeline.Body>
-          </Timeline.Content>
-        </Timeline.Item>
-        <Timeline.Item>
-          <Timeline.Point icon={TbHomeEdit} />
-          <Timeline.Content>
-            <Timeline.Body>
-              <Card
-                className="mx-auto w-60 button1 text-gray-700"
-                style={{ backgroundColor: "#dff2fb" }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                vitae leo quis sapien semper bibendum sed at urna. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere
-                cubilia curae; Nullam et aliquam tortor, a bibendum quam.
-              </Card>
-            </Timeline.Body>
-          </Timeline.Content>
-        </Timeline.Item>
-        <Timeline.Item>
-          <Timeline.Point icon={TbHomeCheck} />
-          <Timeline.Content>
-            <Timeline.Body>
-              <Card
-                className="mx-auto w-60 button1 text-gray-700"
-                style={{ backgroundColor: "#dff2fb" }}
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-                vitae leo quis sapien semper bibendum sed at urna. Vestibulum
-                ante ipsum primis in faucibus orci luctus et ultrices posuere
-                cubilia curae; Nullam et aliquam tortor, a bibendum quam. Lorem
-                ipsum dolor sit amet, consectetur adipiscing elit. Etiam urna.
-              </Card>
-            </Timeline.Body>
-          </Timeline.Content>
-        </Timeline.Item>
-      </Timeline>
+  const Head = () => (
+    <div className="relative">
+      <div className="absolute w-full border-b-2 border-solid border-gray-200 top-1/2 translate-y-1/2"></div>
+      <span className="relative inline-block bg-blue-500 text-white p-2 rounded-full">
+        <HiCalendar />
+      </span>
     </div>
+  )
+
+  const Body = ({ title, body }) => (
+    <div>
+      <div className="text-xl font-semibold text-sky-800">{title}</div>
+      <div className="text-md py-3 px-3 text-gray-600">{body}</div>
+    </div>
+  )
+
+  return (
+    <section className="pb-10">
+      <div className="p-5"></div>
+      <div className="text-center text-3xl font-extrabold text-sky-900">
+        Proje Sürecimiz Nasıl İşliyor?
+      </div>
+      <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+        <div className="w-full grid grid-cols-5">
+          <div>
+            <Head />
+            <Body
+              title="Arsa Temini"
+              body="Karbil Yapı en uygun seçenekleri sizlere sunuyor ve hayalinizdeki yaşam
+             alanına sahip olmak için ilk adımı doğru şekilde atmanızı sağlıyoruz."
+            />
+          </div>
+
+          <div>
+            <Head />
+            <Body
+              title="Analiz ve Fizibilite Çalışmaları"
+              body=" Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve
+              fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi
+              şekilde anlamanızı sağlıyoruz."
+            />
+          </div>
+
+          <div>
+            <Head />
+            <Body
+              title="Tasarım ve Proje Süreçleri"
+              body="Arazi yerleşiminden detaylı kat planlarına, iç mimari tasarımdan
+              peyzaj tasarımına kadar her ayrıntısı sizinle birlikte
+              düşünülmüş en ideal tasarımı oluşturmak için uzman kadromuz
+              detaylı bir çalışma yürütüyor."
+            />
+          </div>
+
+          <div>
+            <Head />
+            <Body
+              title="Projenin Uygulanması"
+              body="Her aşamasında sizlere raporlama sunduğumuz yenilikçi inşaat
+              yaklaşımımızla tüm süreçlerden haberdar olduğunuz ve istediğiniz
+              yerden takip edebildiğiniz şeffaf bir imalat sürecini kaliteli
+              mühendislik hizmetleri ile birleştiriyoruz."
+            />
+          </div>
+
+          <div>
+            <Head />
+            <Body
+              title="Garanti Süreci"
+              body="İnşaat sektöründe yaşanan en büyük sıkıntılardan birisi inşaat
+              sonrası yaşanan tadilat işlemleridir. Yapmış olduğumuz tüm
+              uygulamalarda sözleşme ile belirlenmiş Karbil garanti koşulları
+              işletilir."
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   )
 }
 export default Processes

@@ -163,7 +163,7 @@ const index = () => {
           </span>
         </div> */}
         <ScrollToTop />
-        <div className="flex-1 px-10">
+        <Card className="flex-1 px-10">
           <p className="p-2">Ürünler</p>
           <div className="grid grid-cols-3 gap-3">
             {urun.map((item) => (
@@ -188,7 +188,7 @@ const index = () => {
               </Card>
             ))}
           </div>
-        </div>
+        </Card>
         <div className="flex-2 space-y-2">
           <p className="p-1">Filtrele</p>
           <Card className="max-w-md">

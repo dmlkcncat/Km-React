@@ -1,6 +1,6 @@
-import classNames from "classnames"
+// import classNames from "classnames"
 import { Navbar } from "flowbite-react"
-import { useAppSelector } from "../store"
+// import { useAppSelector } from "../store"
 import { Link } from "react-router-dom"
 
 const NNavbar = () => {
@@ -10,12 +10,13 @@ const NNavbar = () => {
   return (
     <>
       <Navbar
-        style={{ borderRadius: "none", backgroundColor:"white" }}
+        style={{ borderRadius: "none", backgroundColor: "#f0f5ff", zIndex: 10 }}
         // className={classNames({
         //   "z-10 absolute bg-transparent top-0 left-0 w-full font-serif":
         //     type == "transparent",
         //   "bg-blue-500": type == "classic",
         // })}
+        className="sticky top-0 shadow-lg"
         fluid={true}
       >
         <Navbar.Brand to="/navbars">
@@ -36,7 +37,7 @@ const NNavbar = () => {
             <Link to="/">Anasayfa</Link>
           </Navbar.Link>
           <Navbar.Link className="neon-blue-light">
-            <Link to="/">Hakkımızda</Link>
+            <Link to="/hakkımızda">Hakkımızda</Link>
           </Navbar.Link>
           <Navbar.Link className="neon-blue-light">
             <Link to="/urunler">Ürünler</Link>
