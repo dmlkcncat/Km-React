@@ -185,7 +185,7 @@ navbar-element {
     display: -webkit-flex;
     justify-content: center;
     -webkit-justify-content: center;
-    max-width: 820px;
+    max-width: 1366px;
 }
 
 .card--1 .card__img,
@@ -200,6 +200,16 @@ navbar-element {
 
 .card--3 .card__img,
 .card--3 .card__img--hover {
+    background-image: url('/project/proje3.JPG');
+}
+
+.card--4 .card__img,
+.card--4 .card__img--hover {
+    background-image: url('/project/proje3.JPG');
+}
+
+.card--5 .card__img,
+.card--5 .card__img--hover {
     background-image: url('/project/proje3.JPG');
 }
 
@@ -321,4 +331,29 @@ navbar-element {
 
 .card-animation:hover .card__info-hover {
     opacity: 1;
+}
+
+.background-svg {
+    background-image: url('/svg/bg.svg');
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+.accordion-img {
+    /* background-image: url('https://static.vecteezy.com/system/resources/previews/003/594/689/non_2x/single-continuous-line-drawing-welder-with-gesture-okay-works-in-the-construction-of-building-forming-steel-frame-that-is-melted-by-fire-dynamic-one-line-draw-graphic-design-illustration-vector.jpg'); */
+    background-repeat: no-repeat;
+    background-position: 69px center;
+    background-size: contain;
+    background-image: url('/svg/accordion.svg');
+    z-index: 0;
+}
+
+.animate-bounce {
+    animation: bounce 1s infinite;
+}
+
+.usercomment-animated-svg {
+    background-image: url('/svg/usercomment.svg');
+    background-repeat: no-repeat;
+    background-position: cover;
 }

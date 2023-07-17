@@ -5,10 +5,9 @@ import { Card } from "flowbite-react"
 const App = () => {
   return (
     <>
-      <div className="p-1"></div>
-      <div className="flex flex-row gap-3 justify-center">
+      <div className="flex flex-row gap-5 justify-center">
         <Card
-          className="shadow-2xl h-48 w-48 flex justify-center items-center"
+          className="shadow-2xl h-56 w-56 flex justify-center items-center"
           style={{ borderRadius: "100px", backgroundColor: "#afacd8" }}
         >
           <p className="text-gray-800 text-2xl font-bold">

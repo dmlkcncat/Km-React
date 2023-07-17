@@ -19,67 +19,68 @@ const Processes = () => {
   )
 
   return (
-    <section className="pb-10">
-      <div className="p-5"></div>
-      <div className="text-center text-3xl font-extrabold text-sky-900">
-        Proje Sürecimiz Nasıl İşliyor?
-      </div>
-      <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-        <div className="w-full grid grid-cols-5">
-          <div>
-            <Head />
-            <Body
-              title="Arsa Temini"
-              body="Karbil Yapı en uygun seçenekleri sizlere sunuyor ve hayalinizdeki yaşam
+    <div className="p-10 background-svg">
+      <section className="pb-10">
+        <div className="text-center text-3xl font-extrabold text-sky-900">
+          Proje Sürecimiz Nasıl İşliyor?
+        </div>
+        <div className="py-10 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+          <div className="w-full grid grid-cols-5">
+            <div>
+              <Head />
+              <Body
+                title="Arsa Temini"
+                body="Karbil Yapı en uygun seçenekleri sizlere sunuyor ve hayalinizdeki yaşam
              alanına sahip olmak için ilk adımı doğru şekilde atmanızı sağlıyoruz."
-            />
-          </div>
+              />
+            </div>
 
-          <div>
-            <Head />
-            <Body
-              title="Analiz ve Fizibilite Çalışmaları"
-              body=" Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve
+            <div>
+              <Head />
+              <Body
+                title="Analiz ve Fizibilite Çalışmaları"
+                body=" Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve
               fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi
               şekilde anlamanızı sağlıyoruz."
-            />
-          </div>
+              />
+            </div>
 
-          <div>
-            <Head />
-            <Body
-              title="Tasarım ve Proje Süreçleri"
-              body="Arazi yerleşiminden detaylı kat planlarına, iç mimari tasarımdan
+            <div>
+              <Head />
+              <Body
+                title="Tasarım ve Proje Süreçleri"
+                body="Arazi yerleşiminden detaylı kat planlarına, iç mimari tasarımdan
               peyzaj tasarımına kadar her ayrıntısı sizinle birlikte
               düşünülmüş en ideal tasarımı oluşturmak için uzman kadromuz
               detaylı bir çalışma yürütüyor."
-            />
-          </div>
+              />
+            </div>
 
-          <div>
-            <Head />
-            <Body
-              title="Projenin Uygulanması"
-              body="Her aşamasında sizlere raporlama sunduğumuz yenilikçi inşaat
+            <div>
+              <Head />
+              <Body
+                title="Projenin Uygulanması"
+                body="Her aşamasında sizlere raporlama sunduğumuz yenilikçi inşaat
               yaklaşımımızla tüm süreçlerden haberdar olduğunuz ve istediğiniz
               yerden takip edebildiğiniz şeffaf bir imalat sürecini kaliteli
               mühendislik hizmetleri ile birleştiriyoruz."
-            />
-          </div>
+              />
+            </div>
 
-          <div>
-            <Head />
-            <Body
-              title="Garanti Süreci"
-              body="İnşaat sektöründe yaşanan en büyük sıkıntılardan birisi inşaat
+            <div>
+              <Head />
+              <Body
+                title="Garanti Süreci"
+                body="İnşaat sektöründe yaşanan en büyük sıkıntılardan birisi inşaat
               sonrası yaşanan tadilat işlemleridir. Yapmış olduğumuz tüm
               uygulamalarda sözleşme ile belirlenmiş Karbil garanti koşulları
               işletilir."
-            />
+              />
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }
 export default Processes

@@ -46,6 +46,9 @@ const NNavbar = () => {
             <Link to="/hizmetler">Hizmetler</Link>
           </Navbar.Link>
           <Navbar.Link className="neon-blue-light">
+            <Link to="/">SSS</Link>
+          </Navbar.Link>
+          <Navbar.Link className="neon-blue-light">
             <Link to="/">İletişim</Link>
           </Navbar.Link>
         </Navbar.Collapse>

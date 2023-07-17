@@ -6,6 +6,7 @@ import ServiceCard from "./components/ServiceCard"
 import Processes from "./components/Processes"
 import UserComments from "./components/UserComments"
 import SocialMedia from "./components/SocialMedia"
+import SSS from "./components/SSS"
 
 const index = () => {
   return (
@@ -13,7 +14,7 @@ const index = () => {
       <div>
         <CCarousel />
       </div>
-      <div className="mx-auto text-center bg-white p-3">
+      <div className="mx-auto text-center bg-white px-20 ">
         <Counter />
       </div>
       <div className="text-center">
@@ -23,13 +24,11 @@ const index = () => {
       <div>
         <ServiceCard />
       </div>
-      <div className="p-5 bg-slate-100"></div>
-      <div className="p-10">
-        <Processes />
-      </div>
+      <Processes />
       <div>
-        <UserComments />
+        <SSS />
       </div>
+      <UserComments />
       <div className="z-0">
         <SocialMedia />
       </div>

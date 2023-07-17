@@ -57,7 +57,7 @@ const FFooter = () => {
                     No:159 KDZ EREĞLİ /ZONGULDAK
                   </span>
                 </Footer.Link>
-                <Footer.Link href="#">
+                {/* <Footer.Link href="#">
                   Android
                 </Footer.Link>
                 <Footer.Link href="#">
@@ -65,7 +65,7 @@ const FFooter = () => {
                 </Footer.Link>
                 <Footer.Link href="#">
                   MacOS
-                </Footer.Link>
+                </Footer.Link> */}
               </Footer.LinkGroup>
             </div>
           </div>

@@ -11,12 +11,17 @@
   "dependencies": {
     "@ajoelp/json-to-formdata": "^1.5.0",
     "@react-spring/web": "^9.7.2",
+    "@react-three/fiber": "^8.13.5",
     "@reduxjs/toolkit": "^1.9.3",
+    "animate.css": "^4.1.1",
     "classnames": "^2.3.2",
     "dayjs": "^1.11.7",
     "flowbite": "^1.6.5",
     "flowbite-react": "^0.4.4",
+    "framer-motion": "^10.12.18",
+    "framer-motion-3d": "^10.12.18",
     "json-to-form-data": "^1.0.0",
+    "lottie-react": "^2.4.0",
     "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-before-after-slider-component": "^1.1.8",
@@ -27,7 +32,8 @@
     "react-scroll-up": "^1.4.0",
     "react-simple-before-after": "^0.1.0",
     "sass": "^1.63.3",
-    "swiper": "^9.3.2"
+    "swiper": "^9.3.2",
+    "three": "^0.154.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

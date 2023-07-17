@@ -20,15 +20,15 @@ const CCarousel = () => {
           autoplay={{
             delay: 4000,
           }}
-          style={{ height: "60vh", maxHeight: "60vh" }}
+          style={{ height: "60vh", maxHeight: "60vh", minHeight: "60vh" }}
         >
           <SwiperSlide>
             <div className="bg-center bg-no-repeat bg-[url('https://img.freepik.com/free-photo/modern-residential-district-with-green-roof-balcony-generated-by-ai_188544-10276.jpg?w=1380&t=st=1686819142~exp=1686819742~hmac=dfda627fc8b25afd182b5508a3c33741d673565abc6e069aa7868cc84913d083')] bg-gray-500 bg-blend-multiply">
-              <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56 my-auto">
-                <h1 className="mb-2 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
+              <div className="px-4 mx-auto max-w-screen-xl text-center py-24 lg:py-56">
+                <h1 className="mb-2 my-auto text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
                   GELECEK NESİLLERE YAŞANILABİLİR ALANLAR İNŞAA EDİYORUZ..
                 </h1>
-                <p className="mb-8 text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 p-1">
+                <p className="mb-8 my-auto text-lg font-normal text-gray-300 lg:text-xl sm:px-16 lg:px-48 p-1">
                   Konfor ve Huzurun adresi '' KARBİL YAPI '' ...
                 </p>
               </div>

@@ -20,6 +20,8 @@ const DetailProcessesPage = lazy(() =>
   import("./pages/ProcessesManagement/DetailProcessesPage")
 )
 
+const DenemePage = lazy(() => import("./pages/deneme"))
+
 /** @type {import('react-router-dom').RouteObject[]} */
 const routes = [
   {
@@ -88,6 +90,12 @@ const routes = [
         lazy: true,
       },
     ],
+  },
+  {
+    path: "deneme",
+    name: "deneme",
+    element: <DenemePage />,
+    lazy: true,
   },
 ]
 
