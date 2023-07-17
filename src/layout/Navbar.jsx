@@ -1,14 +1,17 @@
 // import classNames from "classnames"
 import { Navbar } from "flowbite-react"
+import { createRef, forwardRef } from "react"
 // import { useAppSelector } from "../store"
 import { Link } from "react-router-dom"
 
-const NNavbar = () => {
+const NNavbar = forwardRef((props, ref) => {
   // const { type } = useAppSelector((state) => state.navbarSlice)
   // console.log({ type })
 
   return (
-    <>
+    <div className="sticky top-0"
+      ref={ref}
+    >
       <Navbar
         style={{ borderRadius: "none", backgroundColor: "#f0f5ff", zIndex: 10 }}
         // className={classNames({
@@ -16,7 +19,7 @@ const NNavbar = () => {
         //     type == "transparent",
         //   "bg-blue-500": type == "classic",
         // })}
-        className="sticky top-0 shadow-lg"
+        className="shadow-lg"
         fluid={true}
       >
         <Navbar.Brand to="/navbars">
@@ -53,7 +56,10 @@ const NNavbar = () => {
           </Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
-    </>
+    </div>
   )
-}
+})
+
+NNavbar.displayName = 'NNavbar'
+
 export default NNavbar
