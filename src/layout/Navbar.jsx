@@ -9,7 +9,7 @@ const NNavbar = forwardRef((props, ref) => {
   // console.log({ type })
 
   return (
-    <div className="sticky top-0"
+    <div className="sticky top-0 z-50"
       ref={ref}
     >
       <Navbar
