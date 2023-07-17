@@ -1,13 +1,19 @@
 // import classNames from "classnames"
 import { Navbar } from "flowbite-react"
-import { createRef, forwardRef } from "react"
-// import { useAppSelector } from "../store"
-import { Link } from "react-router-dom"
+import { forwardRef } from "react"
+import { Link, useLocation } from "react-router-dom"
+
+const NavbarLink = ({ to, text }) => {
+  const location = useLocation()
+
+  console.log(location)
+
+  return <Navbar.Link as={Link} to={to} active={location.pathname === to}>{text}</Navbar.Link>
+}
 
 const NNavbar = forwardRef((props, ref) => {
   // const { type } = useAppSelector((state) => state.navbarSlice)
   // console.log({ type })
-
   return (
     <div className="sticky top-0 z-50"
       ref={ref}
@@ -36,27 +42,15 @@ const NNavbar = forwardRef((props, ref) => {
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <Navbar.Link className="neon-blue-light" active={true}>
-            <Link to="/">Anasayfa</Link>
-          </Navbar.Link>
-          <Navbar.Link className="neon-blue-light">
-            <Link to="/hakkımızda">Hakkımızda</Link>
-          </Navbar.Link>
-          <Navbar.Link className="neon-blue-light">
-            <Link to="/urunler">Ürünler</Link>
-          </Navbar.Link>
-          <Navbar.Link className="neon-blue-light">
-            <Link to="/hizmetler">Hizmetler</Link>
-          </Navbar.Link>
-          <Navbar.Link className="neon-blue-light">
-            <Link to="/">SSS</Link>
-          </Navbar.Link>
-          <Navbar.Link className="neon-blue-light">
-            <Link to="/">İletişim</Link>
-          </Navbar.Link>
+          <NavbarLink to="/" text="Anasayfa" />
+          <NavbarLink to="/hakkimizda" text="Hakkımızda" />
+          <NavbarLink to="/urunler" text="Ürünler" />
+          <NavbarLink to="/hizmetler" text="Hizmetler" />
+          <NavbarLink to="/" text="SSS" />
+          <NavbarLink to="/" text="İletişim" />
         </Navbar.Collapse>
       </Navbar>
-    </div>
+    </div >
   )
 })
 

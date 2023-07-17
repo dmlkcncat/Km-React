@@ -50,7 +50,7 @@ const routes = [
         ],
       },
       {
-        path: "hakkımızda",
+        path: "hakkimizda",
         name: "aboutus",
         label: "Hakkımızda",
         children: [
