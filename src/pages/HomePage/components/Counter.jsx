@@ -5,18 +5,18 @@ import { Card } from "flowbite-react"
 const App = () => {
   return (
     <>
-      <div className="flex flex-row gap-5 justify-center">
+      <div className="flex flex-row gap-5 p-5 justify-center mx-auto">
         <Card
           className="shadow-2xl h-48 w-48 flex justify-center items-center"
           style={{ borderRadius: "100px", backgroundColor: "#afacd8" }}
         >
-          <p className="text-gray-800 text-2xl font-bold">
+          <p className="text-gray-800 text-2xl font-bold text-center">
             <Counter from={1} to={10} />
           </p>
           <p>Tamamlanan Proje</p>
         </Card>
         <Card
-          className="shadow-2xl h-48 w-48 flex justify-center items-center"
+          className="shadow-2xl h-48 w-48 flex justify-center text-center"
           style={{ borderRadius: "100px", backgroundColor: "#b6b3d1" }}
         >
           <p className="text-gray-800 text-2xl font-bold">
@@ -25,7 +25,7 @@ const App = () => {
           <p>Mutlu Müşteri</p>
         </Card>
         <Card
-          className="shadow-2xl h-48 w-48 flex justify-center items-center"
+          className="shadow-2xl h-48 w-48 flex justify-center text-center"
           style={{ borderRadius: "100px", backgroundColor: "#bcbbc9" }}
         >
           <p className="text-gray-800 text-2xl font-bold">
@@ -35,7 +35,7 @@ const App = () => {
           <p>İlde Proje</p>
         </Card>
         <Card
-          className="shadow-2xl h-48 w-48 flex justify-center items-center"
+          className="shadow-2xl h-48 w-48 flex justify-center text-center"
           style={{ borderRadius: "100px", backgroundColor: "#c2c2c2" }}
         >
           <p className="text-gray-800 text-2xl font-bold">
