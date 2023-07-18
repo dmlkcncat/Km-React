@@ -20,10 +20,6 @@ const Slogan = () => {
   }
 
   useEffect(() => {
-    // ilk calıştırma, listener, listener temizleme müqqqqq
-    if (sectionRef.current) {
-    }
-
     window.addEventListener('scroll', scrollListener)
 
     return () => {
