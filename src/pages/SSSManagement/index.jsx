@@ -30,11 +30,11 @@ const index = () => {
               <div class="w-2/6">
                 <p class="text-xl font-semibold pr-5"></p>
               </div>
-              <div class="w-3/4">
+              <div class="w-3/4 space-y-2">
                 {items.map((item, id) => (
                   <details
                     key={item.id}
-                    class="border border-slate-200 rounded pt-2 pb-3 px-3 relative open:shadow-lg mb-1 bg-none open:bg-white duration-300"
+                    class="border border-slate-200 rounded pt-2 pb-3 px-3 relative open:shadow-lg mb-1 bg-slate-200 open:bg-white duration-300"
                   >
                     <summary class="list-none font-semibold relative text-sm cursor-pointer pr-7">
                       {item?.question}
