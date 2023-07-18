@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { FAQService } from "../../services"
 import { Loading } from "../../components/LoadingSpinner"
 import { Card } from "flowbite-react"
+import ScrollToTop from "../../components/ScrollToTop"
 
 const index = () => {
   const [loading, setLoading] = useState(true)
@@ -16,6 +17,7 @@ const index = () => {
 
   return (
     <div className="px-10 p-5">
+      <ScrollToTop />
       {loading ? (
         <Loading />
       ) : (

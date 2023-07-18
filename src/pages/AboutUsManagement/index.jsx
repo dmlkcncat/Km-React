@@ -134,9 +134,9 @@ const index = () => {
             </Tabs.Group>
           </Card>
         </div>
-        <div className="flex-none">
+        {/* <div className="flex-none">
           <SideBarProcesses />
-        </div>
+        </div> */}
       </div>
     </div>
   )

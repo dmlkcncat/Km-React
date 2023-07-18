@@ -5,7 +5,7 @@ import { Card } from "flowbite-react"
 const App = () => {
   return (
     <>
-      <div className="flex flex-row gap-5 p-5 justify-center mx-auto">
+      <div className="flex flex-row gap-5 p-5 justify-center mx-auto bg-white w-full">
         <Card
           className="shadow-2xl h-48 w-48 flex justify-center items-center"
           style={{ borderRadius: "100px", backgroundColor: "#a3b0e6" }}
