@@ -1,5 +1,5 @@
-import { Timeline } from "flowbite-react"
-import { HiCalendar } from "react-icons/hi"
+import { Timeline } from 'flowbite-react'
+import { HiCalendar } from 'react-icons/hi'
 
 const Processes = () => {
   const Head = () => (
@@ -15,6 +15,35 @@ const Processes = () => {
     <div>
       <div className="text-xl font-semibold text-sky-800">{title}</div>
       <div className="text-md py-3 px-3 text-gray-600">{body}</div>
+    </div>
+  )
+
+  const COL_COUNT = 5
+  const stairData = ['1', '2', '3', '4', '5']
+
+  return (
+    <div
+      className="grid"
+      style={{ gridTemplateColumns: `repeat(${COL_COUNT}, 1fr)` }}
+    >
+      {stairData.reverse().map((item, index) => (
+        <>
+          {[...Array(COL_COUNT - index - 1)].map(() => (
+            <div></div>
+          ))}
+          <div className="px-3 -mb-20">
+            <Body
+              title="Analiz ve Fizibilite Çalışmaları"
+              body=" Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve
+              fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi
+              şekilde anlamanızı sağlıyoruz."
+            />
+          </div>
+          {[...Array(index)].map(() => (
+            <div></div>
+          ))}
+        </>
+      ))}
     </div>
   )
 
