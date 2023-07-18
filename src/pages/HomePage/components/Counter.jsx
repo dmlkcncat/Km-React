@@ -8,7 +8,7 @@ const App = () => {
       <div className="flex flex-row gap-5 p-5 justify-center mx-auto">
         <Card
           className="shadow-2xl h-48 w-48 flex justify-center items-center"
-          style={{ borderRadius: "100px", backgroundColor: "#afacd8" }}
+          style={{ borderRadius: "100px", backgroundColor: "#a3b0e6" }}
         >
           <p className="text-gray-800 text-2xl font-bold text-center">
             <Counter from={1} to={10} />
@@ -17,7 +17,7 @@ const App = () => {
         </Card>
         <Card
           className="shadow-2xl h-48 w-48 flex justify-center text-center"
-          style={{ borderRadius: "100px", backgroundColor: "#b6b3d1" }}
+          style={{ borderRadius: "100px", backgroundColor: "#bac3ed" }}
         >
           <p className="text-gray-800 text-2xl font-bold">
             <Counter from={50} to={100} />
@@ -26,7 +26,7 @@ const App = () => {
         </Card>
         <Card
           className="shadow-2xl h-48 w-48 flex justify-center text-center"
-          style={{ borderRadius: "100px", backgroundColor: "#bcbbc9" }}
+          style={{ borderRadius: "100px", backgroundColor: "#d2d7f3" }}
         >
           <p className="text-gray-800 text-2xl font-bold">
             {/* <animated.h1>{props.number.to(number => Math.floor(number))}</animated.h1> */}
@@ -36,7 +36,7 @@ const App = () => {
         </Card>
         <Card
           className="shadow-2xl h-48 w-48 flex justify-center text-center"
-          style={{ borderRadius: "100px", backgroundColor: "#c2c2c2" }}
+          style={{ borderRadius: "100px", backgroundColor: "#8a9de0" }}
         >
           <p className="text-gray-800 text-2xl font-bold">
             {/* <animated.h1>{props.number.to(number => Math.floor(number))}</animated.h1> */}

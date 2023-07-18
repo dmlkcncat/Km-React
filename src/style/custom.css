@@ -357,3 +357,9 @@ navbar-element {
     background-repeat: no-repeat;
     background-position: cover;
 }
+
+.faq-svg {
+    /* background-image: url('/svg/faq.svg'); */
+    background-repeat: no-repeat;
+    background-position: initial;
+}

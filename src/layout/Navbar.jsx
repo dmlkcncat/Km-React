@@ -46,8 +46,8 @@ const NNavbar = forwardRef((props, ref) => {
           <NavbarLink to="/hakkimizda" text="Hakkımızda" />
           <NavbarLink to="/urunler" text="Ürünler" />
           <NavbarLink to="/hizmetler" text="Hizmetler" />
-          <NavbarLink to="/" text="SSS" />
-          <NavbarLink to="/" text="İletişim" />
+          <NavbarLink to="/sss" text="SSS" />
+          <NavbarLink to="/iletisim" text="İletişim" />
         </Navbar.Collapse>
       </Navbar>
     </div >

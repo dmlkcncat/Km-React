@@ -20,6 +20,8 @@ const DetailProcessesPage = lazy(() =>
   import("./pages/ProcessesManagement/DetailProcessesPage")
 )
 
+const SSSPage = lazy(() => import("./pages/SSSManagement/index"))
+
 const DenemePage = lazy(() => import("./pages/deneme"))
 
 /** @type {import('react-router-dom').RouteObject[]} */
@@ -87,6 +89,13 @@ const routes = [
         name: "iletisim",
         label: "İletişim",
         element: <ContactPageManagement />,
+        lazy: true,
+      },
+      {
+        path: "sss",
+        name: "sss",
+        label: "sss",
+        element: <SSSPage />,
         lazy: true,
       },
     ],
