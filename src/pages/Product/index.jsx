@@ -1,203 +1,206 @@
-import {
-  Button,
-  Card,
-  Checkbox,
-  Label,
-  Select,
-  TextInput,
-} from "flowbite-react"
-import { useState, useEffect } from "react"
-// import { MdArrowUpward } from "react-icons/md"
-import { HiOutlineArrowRight } from "react-icons/hi"
-import ScrollToTop from "../../components/ScrollToTop"
+import { Button, Card, Checkbox, Label, Select, TextInput } from 'flowbite-react'
+import { useState, useEffect } from 'react'
+import { HiOutlineArrowRight } from 'react-icons/hi'
+import ScrollToTop from '../../components/ScrollToTop'
+import { ProductService } from '../../services'
 
-const index = () => {
+const Product = () => {
   const urun = [
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "ORGANİZE - 257 M2 - OFİS BİNASI",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/297515.jpg",
+      urunadi: 'ORGANİZE - 257 M2 - OFİS BİNASI',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/297515.jpg',
     },
     {
-      urunadi: "HAMZAVAKIFLI - 141 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/523132.jpg",
+      urunadi: 'HAMZAVAKIFLI - 141 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/523132.jpg',
     },
     {
-      urunadi: "KEŞKEK - 90 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/775878.jpg",
+      urunadi: 'KEŞKEK - 90 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/775878.jpg',
     },
     {
-      urunadi: "DEVREK - 105 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/951141.jpg",
+      urunadi: 'DEVREK - 105 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/951141.jpg',
     },
     {
-      urunadi: "BARTIN - 101 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/838928.jpg",
+      urunadi: 'BARTIN - 101 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/838928.jpg',
     },
     {
-      urunadi: "KOZLU - 73 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KOZLU - 73 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "SEYFETLER - 89 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/692596.jpg",
+      urunadi: 'SEYFETLER - 89 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/692596.jpg',
     },
     {
-      urunadi: "ÇAYLIOĞLU - 92 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/402343.jpg",
+      urunadi: 'ÇAYLIOĞLU - 92 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/402343.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "ORGANİZE - 257 M2 - OFİS BİNASI",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/297515.jpg",
+      urunadi: 'ORGANİZE - 257 M2 - OFİS BİNASI',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/297515.jpg',
     },
     {
-      urunadi: "HAMZAVAKIFLI - 141 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/523132.jpg",
+      urunadi: 'HAMZAVAKIFLI - 141 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/523132.jpg',
     },
     {
-      urunadi: "KEŞKEK - 90 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/775878.jpg",
+      urunadi: 'KEŞKEK - 90 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/775878.jpg',
     },
     {
-      urunadi: "DEVREK - 105 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/951141.jpg",
+      urunadi: 'DEVREK - 105 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/951141.jpg',
     },
     {
-      urunadi: "BARTIN - 101 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/838928.jpg",
+      urunadi: 'BARTIN - 101 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/838928.jpg',
     },
     {
-      urunadi: "KOZLU - 73 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KOZLU - 73 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "SEYFETLER - 89 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/692596.jpg",
+      urunadi: 'SEYFETLER - 89 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/692596.jpg',
     },
     {
-      urunadi: "ÇAYLIOĞLU - 92 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/402343.jpg",
+      urunadi: 'ÇAYLIOĞLU - 92 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/402343.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
     {
-      urunadi: "KIZILCAPINAR - 113 M2",
-      img: "http://karbilyapi.com/denetim/yukleme/orta/714508.jpg",
+      urunadi: 'KIZILCAPINAR - 113 M2',
+      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
     },
   ]
 
-  // const [isVisible, setIsVisible] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+  const [products, setProducts] = useState([])
 
-  // const toggleVisibility = () => {
-  //   if (window.scrollY > 300) {
-  //     setIsVisible(true)
-  //   } else {
-  //     setIsVisible(false)
-  //   }
-  // }
+  const fetchData = () => {
+    setLoading(true)
+    setError(false)
 
-  // const scrollToTop = () => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   })
-  // }
+    ProductService.getAll()
+      .then((response) => {
+        setProducts(response?.data || [])
+        console.log(response?.data)
+      })
+      .catch(() => setError(true))
+      .finally(() => setLoading(false))
+  }
 
-  // useEffect(() => {
-  //   window.addEventListener("scroll", toggleVisibility)
-  //   return () => {
-  //     window.removeEventListener("scroll", toggleVisibility)
-  //   }
-  // }, [])
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   return (
     <div className="p-5">
       <div className="flex flex-row gap-4">
-        {/* <div
-          className={`scroll-to-top ${isVisible ? "show" : ""}`}
-          onClick={scrollToTop}
-        >
-          <span>
-            <MdArrowUpward />
-          </span>
-        </div> */}
         <ScrollToTop />
         <Card className="flex-1 px-10">
           <p className="p-2">Ürünler</p>
           <div className="grid grid-cols-3 gap-3">
-            {urun.map((item) => (
-              <Card key={index} className="max-w-md companies-card">
-                <h5 className="mb-3 text-center font-semibold text-gray-700 dark:text-white lg:text-xl">
-                  {item.urunadi}
-                </h5>
-                <div className="image-hover img-zoom-in">
-                  <img
-                    src={item?.img}
-                    style={{
-                      objectFit: "cover",
-                      width: "100%",
-                      aspectRatio: "1",
-                    }}
-                    alt=""
-                  />
-                </div>
-                <Button gradientDuoTone="greenToBlue" outline>
-                  <p>Ürünü Görüntüle</p>
-                </Button>
-              </Card>
-            ))}
+            {loading ? (
+              <div>loading ....</div>
+            ) : error ? (
+              <div>hata ....</div>
+            ) : (
+              products.map((item) => (
+                <Card
+                  key={item.id}
+                  className="max-w-md companies-card"
+                >
+                  <h5 className="mb-3 text-center font-semibold text-gray-700 dark:text-white lg:text-xl">
+                    {item.name}
+                  </h5>
+                  <div className="image-hover img-zoom-in">
+                    <img
+                      src={item?.firstImage}
+                      style={{
+                        objectFit: 'cover',
+                        width: '100%',
+                        aspectRatio: '1',
+                      }}
+                      alt=""
+                    />
+                  </div>
+                  <Button
+                    gradientDuoTone="greenToBlue"
+                    outline
+                  >
+                    <p>Ürünü Görüntüle</p>
+                  </Button>
+                </Card>
+              ))
+            )}
           </div>
         </Card>
         <div className="flex-2 space-y-2">
           <p className="p-1">Filtrele</p>
           <Card className="max-w-md">
             {/** Room Count */}
-            <div className="max-w-xs" id="select">
+            <div
+              className="max-w-xs"
+              id="select"
+            >
               <div className="mb-2 block">
-                <Label htmlFor="countries" value="Oda Sayısı" />
+                <Label
+                  htmlFor="countries"
+                  value="Oda Sayısı"
+                />
               </div>
-              <Select id="countries" required>
+              <Select
+                id="countries"
+                required
+              >
                 <option>1</option>
                 <option>2</option>
                 <option>2</option>
@@ -241,32 +244,59 @@ const index = () => {
             {/** Garaj */}
             <div>Garaj</div>
             <div className="flex items-center gap-2">
-              <Checkbox defaultChecked id="accept" />
-              <Label className="flex" htmlFor="agree">
+              <Checkbox
+                defaultChecked
+                id="accept"
+              />
+              <Label
+                className="flex"
+                htmlFor="agree"
+              >
                 <p>Var</p>
               </Label>
             </div>
             {/** Plot Square */}
             <div>Arsa Büyüklüğü</div>
-            <div>
+            <div className="flex gap-1">
               <TextInput
+                className="max-w-[6rem]"
                 color="gray"
                 id="input-gray"
-                placeholder="Örn: 150 - 160"
+                placeholder="min"
+                required
+              />
+              <TextInput
+                className="max-w-[6rem]"
+                color="gray"
+                id="input-gray"
+                placeholder="max"
                 required
               />
             </div>
             {/** Home Square Meters */}
             <div>Ev Metrekare</div>
             <div>
-              <TextInput
-                color="gray"
-                id="input-gray"
-                placeholder="Örn: 100 - 120"
-                required
-              />
+              <div className="flex gap-1">
+                <TextInput
+                  className="max-w-[6rem]"
+                  color="gray"
+                  id="input-gray"
+                  placeholder="min"
+                  required
+                />
+                <TextInput
+                  className="max-w-[6rem]"
+                  color="gray"
+                  id="input-gray"
+                  placeholder="max"
+                  required
+                />
+              </div>
             </div>
-            <Button gradientDuoTone="cyanToBlue" outline>
+            <Button
+              gradientDuoTone="cyanToBlue"
+              outline
+            >
               <p>Devam</p>
               <span>
                 <HiOutlineArrowRight className="h-6 w-6 ml-1" />
@@ -278,4 +308,4 @@ const index = () => {
     </div>
   )
 }
-export default index
+export default Product
