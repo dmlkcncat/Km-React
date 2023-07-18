@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react"
 const Carousel = () => {
   const data = [
     {
-      img: "https://img.freepik.com/free-photo/modern-residential-district-with-green-roof-balcony-generated-by-ai_188544-10276.jpg?w=1380&t=st=1686819142~exp=1686819742~hmac=dfda627fc8b25afd182b5508a3c33741d673565abc6e069aa7868cc84913d083",
+      img: '/slider/slider1.jpg',
       content: (
         <>
           <h1 className="mb-2 my-auto text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
@@ -17,7 +17,7 @@ const Carousel = () => {
       ),
     },
     {
-      img: "https://img.freepik.com/free-photo/real-estate-agent-with-house-model-keys_1150-17813.jpg?w=1060&t=st=1686924560~exp=1686925160~hmac=0e45ee426eb4a2f679681623f7438dc10ce7fc4e34270b5c9336eb244726e6e3",
+      img: '/slider/slider2.jpg',
       content: (
         <>
           <h2 className="mb-2 text-2xl font-bold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">
@@ -31,7 +31,7 @@ const Carousel = () => {
       ),
     },
     {
-      img: "https://img.freepik.com/free-photo/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-ge_1258-150762.jpg?w=1060&t=st=1686833192~exp=1686833792~hmac=fd1eb5ac94bcde50ca5f922745cc3d73c39233e90ebf19499971d0e8daa7ae45",
+      img: '/slider/slider3.jpg',
       content: (
         <>
           <h1 className="mb-2 text-2xl font-bold tracking-tight leading-none text-white md:text-5xl lg:text-6xl">

@@ -363,3 +363,14 @@ navbar-element {
     background-repeat: no-repeat;
     background-position: initial;
 }
+
+.circle-div {
+    background-color: #686767;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s;
+}
+
+.circle-div:hover {
+    box-shadow: 0 0 5px rgba(107, 107, 107, 0.7);
+}
