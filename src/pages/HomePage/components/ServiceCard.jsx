@@ -27,7 +27,7 @@ const Product = () => {
     }
   }, [sectionRef.current])
   return (
-    <div className="bg-slate-100 overflow-hidden">
+    <div className="bg-[#f1fafb] overflow-hidden">
       <animated.section
         ref={sectionRef}
         style={fadeStyles}
@@ -97,9 +97,6 @@ const Product = () => {
               </div>
             </article>
           </section>
-          <a href="">
-            <div className="text-center py-6 text-teal-900">Tüm Projeleri Görüntüle</div>
-          </a>
         </div>
         <div className="p-10"></div>
       </animated.section>

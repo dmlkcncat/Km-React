@@ -6,7 +6,8 @@ import UserComments from './components/UserComments'
 import SocialMedia from './components/SocialMedia'
 import SSS from './components/SSS'
 import Welcome from './components/Welcome'
-import { useOutletContext } from 'react-router-dom'
+import { Link, useOutletContext } from 'react-router-dom'
+import { Button } from 'flowbite-react'
 
 const index = () => {
   const { setNavbarVisibility, navbarVisibility } = useOutletContext()
@@ -20,9 +21,18 @@ const index = () => {
       <div className="text-center">
         <Slogan />
       </div>
-      <div className="p-5 bg-slate-100"></div>
+      <div className="p-5 bg-[#f1fafb]"></div>
       <div>
         <ServiceCard />
+      </div>
+      <div className="p-2 bg-[#f1fafb]">
+        <Button
+          gradientDuoTone="greenToBlue"
+          outline
+          className="items-center mx-auto text-teal-900"
+        >
+          <Link href="/urunler">Tüm Projeleri Görüntüle</Link>
+        </Button>
       </div>
       <Processes />
       <div>
