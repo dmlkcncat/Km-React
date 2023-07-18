@@ -65,9 +65,7 @@ export function spliceIntoChunks(arr, chunkSize) {
   return res
 }
 
-export function isInViewport(element) {
+export function isInViewport(element, safeZone = 0) {
   const rect = element.getBoundingClientRect()
-  return (
-    rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
-  )
+  return window.innerHeight - rect.top >= safeZone
 }

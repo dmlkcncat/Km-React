@@ -8,14 +8,14 @@ const Slogan = () => {
 
   const fadeStyles = useSpring({
     config: {},
-    from: { x: 450 },
+    from: { x: 600 },
     to: {
-      x: showA ? 0 : 450,
+      x: showA ? 0 : 600,
     },
   })
 
   const scrollListener = (...e) => {
-    const visible = isInViewport(sectionRef.current)
+    const visible = isInViewport(sectionRef.current, 350)
     if (visible) setShowA(visible)
   }
 
@@ -32,7 +32,7 @@ const Slogan = () => {
   }, [sectionRef.current])
 
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-hidden">
       <animated.section
         ref={sectionRef}
         style={fadeStyles}
