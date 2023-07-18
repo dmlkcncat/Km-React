@@ -41,7 +41,7 @@ export const getPath = (path, data = {}) => {
 
         return acc
       },
-      ['/']
+      ['/'],
     )
     .map((x) => x?.path)
     .join('/')
@@ -57,10 +57,17 @@ export const hourFormat = (hour) => (hour < 10 ? '0' : '') + hour
 export const getHour = (date) => dayjs(date).format('HH')
 
 export function spliceIntoChunks(arr, chunkSize) {
-  const res = [];
+  const res = []
   while (arr.length > 0) {
-      const chunk = arr.splice(0, chunkSize);
-      res.push(chunk);
+    const chunk = arr.splice(0, chunkSize)
+    res.push(chunk)
   }
-  return res;
+  return res
+}
+
+export function isInViewport(element) {
+  const rect = element.getBoundingClientRect()
+  return (
+    rect.top >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+  )
 }
