@@ -1,5 +1,6 @@
-import { Timeline } from 'flowbite-react'
+import { Card, Timeline } from 'flowbite-react'
 import { HiCalendar } from 'react-icons/hi'
+import classNames from 'classnames'
 
 const Processes = () => {
   const Head = () => (
@@ -11,36 +12,72 @@ const Processes = () => {
     </div>
   )
 
-  const Body = ({ title, body }) => (
-    <div>
+  const Body = ({ title, body, ...props }) => (
+    <div
+      className={classNames(
+        'bg-white rounded-xl border border-solid border-gray-200 shadow-md hover:shadow-2xl p-3 select-none cursor-pointer scale-100 hover:scale-105 transition-transform',
+        props?.className,
+      )}
+      {...props}
+    >
       <div className="text-xl font-semibold text-sky-800">{title}</div>
       <div className="text-md py-3 px-3 text-gray-600">{body}</div>
     </div>
   )
 
-  const COL_COUNT = 5
-  const stairData = ['1', '2', '3', '4', '5']
+  const stairData = [
+    {
+      title: 'Analiz ve Fizibilite Çalışmaları',
+      body: 'Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi şekilde anlamanızı sağlıyoruz.',
+      color: '#ecce60',
+    },
+    {
+      title: 'Analiz ve Fizibilite Çalışmaları',
+      body: 'Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi şekilde anlamanızı sağlıyoruz.',
+      color: '#fcdc6e',
+    },
+    {
+      title: 'Analiz ve Fizibilite Çalışmaları',
+      body: 'Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi şekilde anlamanızı sağlıyoruz.',
+      color: '#ffeb7c',
+    },
+    {
+      title: 'Analiz ve Fizibilite Çalışmaları',
+      body: 'Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi şekilde anlamanızı sağlıyoruz.',
+      color: '#fff98a',
+    },
+    {
+      title: 'Analiz ve Fizibilite Çalışmaları',
+      body: 'Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi şekilde anlamanızı sağlıyoruz.',
+      color: '#ffff98',
+    },
+  ]
+
+  const COL_COUNT = stairData.length
 
   return (
     <div
-      className="grid"
+      className="grid background-svg"
       style={{ gridTemplateColumns: `repeat(${COL_COUNT}, 1fr)` }}
     >
       {stairData.reverse().map((item, index) => (
         <>
-          {[...Array(COL_COUNT - index - 1)].map(() => (
-            <div></div>
+          {[...Array(COL_COUNT - index - 1)].map((item, key) => (
+            <div key={key}></div>
           ))}
-          <div className="px-3 -mb-20">
+          <div
+            className={classNames('px-5', {
+              '-mt-52': index != 0,
+            })}
+          >
             <Body
-              title="Analiz ve Fizibilite Çalışmaları"
-              body=" Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve
-              fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi
-              şekilde anlamanızı sağlıyoruz."
+              title={item.title}
+              body={item.body}
+              style={{ backgroundColor: item.color }}
             />
           </div>
-          {[...Array(index)].map(() => (
-            <div></div>
+          {[...Array(index)].map((item, key) => (
+            <div key={key}></div>
           ))}
         </>
       ))}
