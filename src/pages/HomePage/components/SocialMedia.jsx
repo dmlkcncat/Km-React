@@ -19,7 +19,7 @@ const SocialMedia = () => {
             Siz Hayal Edin,Biz İnşa Edelim!
           </div>
         </div>
-        <div className="mx-auto animate-bounce">
+        <div className="mx-auto hover:animate-bounce">
           <img src="/socialmedia/karbil1.png" alt="" width={360} />
         </div>
       </div>

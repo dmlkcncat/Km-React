@@ -21,11 +21,11 @@ const index = () => {
       <div className="text-center">
         <Slogan />
       </div>
-      <div className="p-5 bg-[#f1fafb]"></div>
+      <div className="p-5 bg-white"></div>
       <div>
         <ServiceCard />
       </div>
-      <div className="p-2 bg-[#f1fafb]">
+      <div className="p-2 bg-white">
         <Button
           gradientDuoTone="greenToBlue"
           outline

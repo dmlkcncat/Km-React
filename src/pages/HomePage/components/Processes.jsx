@@ -20,6 +20,10 @@ const Processes = () => {
       )}
       {...props}
     >
+      <span className="sr-only"></span>
+      <div className="absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-white bg-blue-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900">
+        1
+      </div>
       <div className="text-xl font-semibold text-sky-800">{title}</div>
       <div className="text-md py-3 px-3 text-gray-600">{body}</div>
     </div>
@@ -27,26 +31,31 @@ const Processes = () => {
 
   const stairData = [
     {
+      id: 1,
       title: 'Analiz ve Fizibilite Çalışmaları',
       body: 'Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi şekilde anlamanızı sağlıyoruz.',
       color: '#ecce60',
     },
     {
+      id: 2,
       title: 'Analiz ve Fizibilite Çalışmaları',
       body: 'Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi şekilde anlamanızı sağlıyoruz.',
       color: '#fcdc6e',
     },
     {
+      id: 3,
       title: 'Analiz ve Fizibilite Çalışmaları',
       body: 'Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi şekilde anlamanızı sağlıyoruz.',
       color: '#ffeb7c',
     },
     {
+      id: 4,
       title: 'Analiz ve Fizibilite Çalışmaları',
       body: 'Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi şekilde anlamanızı sağlıyoruz.',
       color: '#fff98a',
     },
     {
+      id: 5,
       title: 'Analiz ve Fizibilite Çalışmaları',
       body: 'Tüm süreçleriniz başlamadan önce sunmuş olduğumuz analiz ve fizibilite hizmetleri sayesinde arazinizin potansiyelini en iyi şekilde anlamanızı sağlıyoruz.',
       color: '#ffff98',

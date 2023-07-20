@@ -1,6 +1,7 @@
 import { useSpring, animated } from '@react-spring/web'
 import { useEffect, useRef, useState } from 'react'
 import { isInViewport } from '../../../utils'
+import SliderBnA from 'react-bna'
 
 const Slogan = () => {
   const sectionRef = useRef()
@@ -27,6 +28,9 @@ const Slogan = () => {
     }
   }, [sectionRef.current])
 
+  const before = 'https://blog.architizer.com/wp-content/uploads/centre-pompidou.jpg'
+  const after = 'https://blog.architizer.com/wp-content/uploads/centre-pompidou.jpg'
+
   return (
     <div className="bg-white overflow-hidden">
       <animated.section
@@ -47,11 +51,20 @@ const Slogan = () => {
           </div>
           <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
             <img
+              className="hover:bg-gray-100"
               src="/img/prefabrik.png"
               alt="mockup"
               width={'100%'}
             />
           </div>
+        </div>
+        <div className="lg:mt-0 lg:col-span-5 lg:flex">
+          <SliderBnA
+            before="/afterbefore/Sketch5.png"
+            after="/afterbefore/Sketch6.png"
+            divisorBorder={true}
+            imageHeight={80}
+          />
         </div>
         <div className="p-5"></div>
       </animated.section>

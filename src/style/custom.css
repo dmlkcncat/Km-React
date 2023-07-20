@@ -334,9 +334,10 @@ navbar-element {
 }
 
 .background-svg {
-    background-image: url('/svg/bg.svg');
+    background-image: url('/svg/Polygon.svg');
     background-repeat: no-repeat;
     background-position: cover;
+    width: 100%;
 }
 
 .accordion-img {

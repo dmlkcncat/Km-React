@@ -27,7 +27,7 @@ const Product = () => {
     }
   }, [sectionRef.current])
   return (
-    <div className="bg-[#f1fafb] overflow-hidden">
+    <div className="bg-white overflow-hidden">
       <animated.section
         ref={sectionRef}
         style={fadeStyles}
