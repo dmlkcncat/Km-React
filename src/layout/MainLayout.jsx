@@ -14,7 +14,7 @@ const MainLayout = () => {
         {navbarVisibility && <Navbar />}
         <div
           className="flex-1"
-          style={{ backgroundColor: "#F7F7F7" }}
+          style={{ backgroundColor: "#fff" }}
         >
           <Outlet context={{ setNavbarVisibility, navbarVisibility }} />
         </div>

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { isInViewport } from '../../../utils'
 import SliderBnA from 'react-bna'
 
+
 const Slogan = () => {
   const sectionRef = useRef()
   const [showA, setShowA] = useState(false)
@@ -27,9 +28,6 @@ const Slogan = () => {
       window.removeEventListener('scroll', scrollListener)
     }
   }, [sectionRef.current])
-
-  const before = 'https://blog.architizer.com/wp-content/uploads/centre-pompidou.jpg'
-  const after = 'https://blog.architizer.com/wp-content/uploads/centre-pompidou.jpg'
 
   return (
     <div className="bg-white overflow-hidden">

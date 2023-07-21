@@ -15,12 +15,16 @@ const SocialMedia = () => {
       <div className="flex flex-auto">
         <div className="text-center text-3xl font-extrabold text-white my-auto w-full">
           <div className="max-w-lg mx-auto">
-            Yepyeni Projeler ve Gelişmelerden Haberdar Olmak için Takipte Kalın.
-            Siz Hayal Edin,Biz İnşa Edelim!
+            Yepyeni Projeler ve Gelişmelerden Haberdar Olmak için Takipte Kalın. Siz Hayal Edin,Biz
+            İnşa Edelim!
           </div>
         </div>
         <div className="mx-auto hover:animate-bounce">
-          <img src="/socialmedia/karbil1.png" alt="" width={360} />
+          <img
+            src="/socialmedia/karbil1.png"
+            alt=""
+            width={360}
+          />
         </div>
       </div>
     </section>

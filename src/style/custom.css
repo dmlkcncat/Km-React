@@ -106,21 +106,29 @@ navbar-element {
 
 .colorful-text-animation {
     position: relative;
-    color: #252B37;
-    animation: textColor 10s ease infinite;
+    color: #4d69a1;
+    animation: textColor 5s ease infinite;
 }
 
 @keyframes textColor {
     0% {
-        color: #002072;
+        color: #5371f7;
+    }
+
+    25% {
+        color: #2e3b5e;
     }
 
     50% {
-        color: #0fffc1;
+        color: #31bfeb;
+    }
+
+    75% {
+        color: #3e82f1;
     }
 
     100% {
-        color: #7e0fff;
+        color: #0a1057;
     }
 }
 

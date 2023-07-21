@@ -34,11 +34,13 @@ const index = () => {
           <Link href="/urunler">Tüm Projeleri Görüntüle</Link>
         </Button>
       </div>
+      <div className="p-5"></div>
       <Processes />
+      <div className="p-5"></div>
+      <UserComments />
       <div>
         <SSS />
       </div>
-      <UserComments />
       <div className="z-0">
         <SocialMedia />
       </div>
