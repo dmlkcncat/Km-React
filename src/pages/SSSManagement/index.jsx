@@ -16,12 +16,12 @@ const index = () => {
   }, [])
 
   return (
-    <div className="px-10 p-5">
+    <div className="px-10 p-3">
       <ScrollToTop />
       {loading ? (
         <Loading />
       ) : (
-        <div>
+        <div className="px-6">
           <Card className="faq-svg row-span-3">
             <div className="text-center text-3xl font-extrabold text-gray-400">
               Hakkımızda Merak Edilenler
