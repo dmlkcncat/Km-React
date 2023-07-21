@@ -17,8 +17,8 @@ const index = () => {
   return (
     <div className="p-3">
       <div className="flex flex-row gap-4">
-        <div className="container p-2">
-          <Card className="flex-auto h-full p-2">
+        <div className="container p-2 mx-auto">
+          <Card className="flex-auto h-full p-2 mx-auto">
             <div className="mx-auto">
               <img
                 src="/img/karbillogo.png"

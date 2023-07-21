@@ -20,12 +20,12 @@ const App = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex flex-row gap-5 p-5 justify-center mx-auto bg-white w-full">
+        <div className="flex flex-row gap-5 p-5 justify-center mx-auto bg-blue-100 w-full">
           {items.map((item) => (
             <Card
               key={item.id}
               className="shadow-2xl h-48 w-48 flex justify-center items-center circle-div"
-              style={{ borderRadius: '100px', backgroundColor: '#a3b0e6' }}
+              style={{ borderRadius: '100px', backgroundColor: '#4D93C3' }}
             >
               <p className="text-gray-800 text-2xl font-bold text-center">
                 <Counter
@@ -33,7 +33,7 @@ const App = () => {
                   to={item?.count}
                 />
               </p>
-              <p>{item?.name}</p>
+              <p className="text-gray-800 font-bold">{item?.name}</p>
             </Card>
           ))}
         </div>

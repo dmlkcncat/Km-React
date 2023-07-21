@@ -18,14 +18,14 @@ const index = () => {
         setNavbarVisibility={setNavbarVisibility}
         navbarVisibility={navbarVisibility}
       />
-      <div className="text-center">
+      <div className="text-center bg-sky-100">
         <Slogan />
       </div>
-      <div className="p-5 bg-white"></div>
-      <div>
+      <div className="p-5 bg-sky-100"></div>
+      <div className="bg-blue-100">
         <ServiceCard />
       </div>
-      <div className="p-2 bg-white">
+      <div className="p-2 bg-blue-100">
         <Button
           gradientDuoTone="greenToBlue"
           outline
@@ -34,18 +34,18 @@ const index = () => {
           <Link href="/urunler">Tüm Projeleri Görüntüle</Link>
         </Button>
       </div>
-      <div className="p-5"></div>
+      <div className="p-5 bg-sky-100"></div>
       <Processes />
-      <div className="p-5"></div>
+      <div className="p-5 bg-sky-100"></div>
       <UserComments />
-      <div>
+      <div className="bg-teal-100">
         <SSS />
       </div>
+      <div className="p-5 bg-teal-100"></div>
       <div className="z-0">
         <SocialMedia />
       </div>
       {/* <p className="text-center font-extrabold p-10">Referanslarımız</p> */}
-      <div className="p-10"></div>
       <ScrollToTop />
     </div>
   )
