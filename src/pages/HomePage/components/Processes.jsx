@@ -42,13 +42,14 @@ const Processes = () => {
           <div className="text-center text-4xl font-extrabold colorful-text-animation bg-sky-100">
             Proje İşleyiş Süreci
           </div>
+          <div className="p-5"></div>
           <div
             className="grid bg-sky-100 px-5"
             style={{ gridTemplateColumns: `repeat(${COL_COUNT}, 1fr)` }}
           >
-            {items.reverse().map((item, index) => (
+            {items.map((item, index) => (
               <Fragment key={index}>
-                {[...Array(COL_COUNT - index - 1)].map((item, key) => (
+                {[...Array(index)].map((item, key) => (
                   <div key={key}></div>
                 ))}
                 <div
@@ -63,7 +64,8 @@ const Processes = () => {
                     style={{ backgroundColor: item.hexCode }}
                   />
                 </div>
-                {[...Array(index)].map((item, key) => (
+
+                {[...Array(COL_COUNT - index - 1)].map((item, key) => (
                   <div key={key}></div>
                 ))}
               </Fragment>
