@@ -203,22 +203,22 @@ navbar-element {
 
 .card--2 .card__img,
 .card--2 .card__img--hover {
-    background-image: url('/project/proje2.JPG');
+    background-image: url('/project/proje1.JPG');
 }
 
 .card--3 .card__img,
 .card--3 .card__img--hover {
-    background-image: url('/project/proje3.JPG');
+    background-image: url('/project/proje1.JPG');
 }
 
 .card--4 .card__img,
 .card--4 .card__img--hover {
-    background-image: url('/project/proje3.JPG');
+    background-image: url('/project/proje1.JPG');
 }
 
 .card--5 .card__img,
 .card--5 .card__img--hover {
-    background-image: url('/project/proje3.JPG');
+    background-image: url('/project/proje1.JPG');
 }
 
 .card__like {
