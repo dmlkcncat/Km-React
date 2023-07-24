@@ -43,7 +43,7 @@ const Product = () => {
                 <div className="card__img--hover"></div>
               </a>
               <div className="card__info">
-                <span className="card__category">220 M2 Çelik Konstrüksiyon</span>
+                <span className="card__category">220 M2 Deneme Ürünü</span>
                 <h3 className="card__title"></h3>
                 <span className="card__by">Düzce</span>
               </div>
@@ -55,7 +55,7 @@ const Product = () => {
                 <div className="card__img--hover"></div>
               </a>
               <div className="card__info">
-                <span className="card__category">253 M2 DUBLEKS Çelik Konstrüksiyon</span>
+                <span className="card__category">253 M2 Deneme Ürünü</span>
                 <h3 className="card__title"></h3>
                 <span className="card__by">Ereğli</span>
               </div>
@@ -67,7 +67,7 @@ const Product = () => {
                 <div className="card__img--hover"></div>
               </a>
               <div className="card__info">
-                <span className="card__category">121 M2 DUBLEKS Çelik Konstrüksiyon</span>
+                <span className="card__category">121 M2 Deneme Ürünü</span>
                 <h3 className="card__title"></h3>
                 <span className="card__by">Ereğli</span>
               </div>
@@ -79,7 +79,7 @@ const Product = () => {
                 <div className="card__img--hover"></div>
               </a>
               <div className="card__info">
-                <span className="card__category">220 M2 Çelik Konstrüksiyon</span>
+                <span className="card__category">220 M2 Deneme Ürünü</span>
                 <h3 className="card__title"></h3>
                 <span className="card__by">Düzce</span>
               </div>
