@@ -26,7 +26,7 @@ const index = () => {
             <div className="text-center text-3xl font-extrabold text-gray-400">
               Hakkımızda Merak Edilenler
             </div>
-            <section className="bg-white w-4/5 px-10 pb-8 pt-10 rounded-lg flex justify-between flex-row">
+            <section className="w-4/5 px-10 pb-8 pt-10 rounded-lg flex justify-between flex-row">
               <div className="w-2/6">
                 <p className="text-xl font-semibold pr-5"></p>
               </div>

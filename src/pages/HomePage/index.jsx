@@ -8,6 +8,7 @@ import SSS from './components/SSS'
 import Welcome from './components/Welcome'
 import { Link, useOutletContext } from 'react-router-dom'
 import { Button } from 'flowbite-react'
+import { NavbarLink } from 'flowbite-react/lib/esm/components/Navbar/NavbarLink'
 
 const index = () => {
   const { setNavbarVisibility, navbarVisibility } = useOutletContext()
@@ -30,18 +31,19 @@ const index = () => {
           gradientDuoTone="greenToBlue"
           outline
           className="items-center mx-auto text-teal-900"
+          to="/urunler"
         >
-          <Link href="/urunler">Tüm Projeleri Görüntüle</Link>
+          Tüm Projeleri Görüntüle
         </Button>
       </div>
       <div className="p-5 bg-sky-100"></div>
       <Processes />
       <div className="p-5 bg-sky-100"></div>
       <UserComments />
-      <div className="bg-teal-100">
+      <div className="sss-bg-color">
         <SSS />
       </div>
-      <div className="p-5 bg-teal-100"></div>
+      <div className="p-5 sss-bg-color"></div>
       <div className="z-0">
         <SocialMedia />
       </div>

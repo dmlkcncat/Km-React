@@ -384,3 +384,11 @@ navbar-element {
     box-shadow: 0 0 5px rgba(107, 107, 107, 0.7);
 }
 
+.sss-bg-color {
+    background: linear-gradient(90deg, rgba(135, 157, 217, 1) 7%, rgba(195, 193, 217, 1) 25%, rgba(135, 157, 217, 1) 51%, rgba(219, 237, 244, 1) 76%, rgba(0, 212, 255, 1) 100%);
+}
+
+.usercomments-bg-color {
+    background: rgb(95, 128, 217);
+    background: linear-gradient(90deg, rgba(95, 128, 217, 1) 7%, rgba(124, 115, 221, 1) 25%, rgba(98, 203, 197, 1) 51%, rgba(100, 204, 247, 1) 76%, rgba(0, 212, 255, 1) 100%);
+}
