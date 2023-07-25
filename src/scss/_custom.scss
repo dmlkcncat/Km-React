@@ -51,3 +51,21 @@
 .slogan-bg {
   background-image: linear-gradient(to right, rgb(172, 199, 202) rgb(93, 146, 179));
 }
+
+.slider-font {
+  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+}
+
+@media screen and (min-width: 1280px) {
+  .with-line {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 85px;
+      left: calc(100% - 7px);
+      transform: rotate(30deg);
+      width: 100px;
+      border-bottom: 1px solid rgb(13, 13, 13);
+    }
+  }
+}

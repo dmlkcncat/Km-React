@@ -11,14 +11,14 @@ const SliderBnA = () => {
           <span className="flex w-2.5 h-2.5 bg-gray-200 rounded-full mr-1.5 flex-shrink-0"></span>
         </div> */}
         <SliderBnA
-          before="/afterbefore/Sketch5.png"
-          after="/afterbefore/Sketch6.png"
+          before="/afterbefore/karbil1.png"
+          after="/afterbefore/karbila1.png"
           divisorBorder={true}
           imageHeight={66}
         />
         <SliderBnA
-          before="/afterbefore/Sketch5.png"
-          after="/afterbefore/Sketch6.png"
+          before="/afterbefore/karbil2.png"
+          after="/afterbefore/karbila2.png"
           divisorBorder={true}
           imageHeight={66}
         />

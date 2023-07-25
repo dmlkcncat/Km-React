@@ -54,24 +54,6 @@ const Slogan = () => {
             />
           </div>
         </div>
-        <div className="lg:mt-0 lg:col-span-5 lg:flex items-center my-auto gap-10">
-          <div className="grid grid-flow-row">
-            <SliderBnA
-              before="/afterbefore/Sketch5.png"
-              after="/afterbefore/Sketch6.png"
-              divisorBorder={true}
-              imageHeight={66}
-            />
-          </div>
-          <div className="grid grid-flow-row">
-            <SliderBnA
-              before="/afterbefore/Sketch5.png"
-              after="/afterbefore/Sketch6.png"
-              divisorBorder={true}
-              imageHeight={66}
-            />
-          </div>
-        </div>
         <div className="p-5"></div>
       </animated.section>
     </div>

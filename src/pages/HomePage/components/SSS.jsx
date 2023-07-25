@@ -3,7 +3,10 @@ import sss from '../../../data/sss.json'
 const SSS = () => {
   return (
     <div className="p-5 space-y-2">
-      <div className="text-center text-4xl font-extrabold text-slate-700 mt-5 p-5">
+      <div
+        className="text-center text-4xl font-extrabold text-slate-700 mt-5 p-5"
+        style={{ textDecorationLine: 'underline', textDecorationStyle: 'solid' }}
+      >
         Sıkça Sorulan Sorular
       </div>
       <div className="max-w-3xl w-full mx-auto space-y-3">
@@ -13,7 +16,7 @@ const SSS = () => {
             className="border border-slate-200 rounded pt-2 pb-3 px-3 relative open:shadow-lg mb-1 bg-slate-300 open:bg-slate-200 duration-300"
           >
             <summary className="list-none font-semibold relative text-sm cursor-pointer pr-7">
-              1. {item.question}
+              {item.id}. {item.question}
               <div className="absolute top-0 right-0 bg-slate-200 rounded-full px-1 py-0.5 cursor-pointer visible open:invisible">
                 <svg
                   className="h-5 w-4 text-pink-700"

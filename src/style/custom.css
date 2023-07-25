@@ -198,28 +198,9 @@ navbar-element {
 
 .card--1 .card__img,
 .card--1 .card__img--hover {
-    background-image: url('/project/proje1.JPG');
+    background-image: var(--source);
 }
 
-.card--2 .card__img,
-.card--2 .card__img--hover {
-    background-image: url('/project/proje1.JPG');
-}
-
-.card--3 .card__img,
-.card--3 .card__img--hover {
-    background-image: url('/project/proje1.JPG');
-}
-
-.card--4 .card__img,
-.card--4 .card__img--hover {
-    background-image: url('/project/proje1.JPG');
-}
-
-.card--5 .card__img,
-.card--5 .card__img--hover {
-    background-image: url('/project/proje1.JPG');
-}
 
 .card__like {
     width: 18px;
@@ -273,7 +254,6 @@ navbar-element {
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     top: 0;
-
 }
 
 .card-animation {
@@ -376,7 +356,7 @@ navbar-element {
 .circle-div {
     background-color: #686767;
     border-radius: 50%;
-    box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.3); */
     transition: box-shadow 0.3s;
 }
 
@@ -391,4 +371,29 @@ navbar-element {
 .usercomments-bg-color {
     background: rgb(95, 128, 217);
     background: linear-gradient(90deg, rgba(95, 128, 217, 1) 7%, rgba(124, 115, 221, 1) 25%, rgba(98, 203, 197, 1) 51%, rgba(100, 204, 247, 1) 76%, rgba(0, 212, 255, 1) 100%);
+}
+
+/* .processes-svg {
+    background-image: url('/svg/deneme1.png');
+    background-repeat: round;
+    background-position: cover;
+    backdrop-filter: blur("5px");
+} */
+
+.processes-svg {
+    background-image: url('/svg/processes.svg');
+    background-repeat: no-repeat;
+    background-position: cover;
+}
+
+.counter-svg {
+    background-image: url('/svg/counter.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lastproject-svg {
+    background-image: url('/svg/lastproject.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
