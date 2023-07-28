@@ -47,7 +47,7 @@ const Product = () => {
         style={fadeStyles}
       >
         <div className="p-3"></div>
-        <div className="text-center text-4xl font-extrabold text-[#eeeeee] animate-bounce">
+        <div className="text-center text-4xl font-extrabold text-[#eeeeee] animate-bounce slider-font">
           Son Projelerimiz
         </div>
         <div className="p-6"></div>

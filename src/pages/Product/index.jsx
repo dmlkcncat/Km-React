@@ -5,121 +5,6 @@ import ScrollToTop from '../../components/ScrollToTop'
 import { ProductService } from '../../services'
 
 const Product = () => {
-  const urun = [
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'ORGANİZE - 257 M2 - OFİS BİNASI',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/297515.jpg',
-    },
-    {
-      urunadi: 'HAMZAVAKIFLI - 141 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/523132.jpg',
-    },
-    {
-      urunadi: 'KEŞKEK - 90 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/775878.jpg',
-    },
-    {
-      urunadi: 'DEVREK - 105 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/951141.jpg',
-    },
-    {
-      urunadi: 'BARTIN - 101 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/838928.jpg',
-    },
-    {
-      urunadi: 'KOZLU - 73 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'SEYFETLER - 89 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/692596.jpg',
-    },
-    {
-      urunadi: 'ÇAYLIOĞLU - 92 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/402343.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'ORGANİZE - 257 M2 - OFİS BİNASI',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/297515.jpg',
-    },
-    {
-      urunadi: 'HAMZAVAKIFLI - 141 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/523132.jpg',
-    },
-    {
-      urunadi: 'KEŞKEK - 90 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/775878.jpg',
-    },
-    {
-      urunadi: 'DEVREK - 105 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/951141.jpg',
-    },
-    {
-      urunadi: 'BARTIN - 101 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/838928.jpg',
-    },
-    {
-      urunadi: 'KOZLU - 73 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'SEYFETLER - 89 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/692596.jpg',
-    },
-    {
-      urunadi: 'ÇAYLIOĞLU - 92 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/402343.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-    {
-      urunadi: 'KIZILCAPINAR - 113 M2',
-      img: 'http://karbilyapi.com/denetim/yukleme/orta/714508.jpg',
-    },
-  ]
-
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
   const [products, setProducts] = useState([])
@@ -142,12 +27,26 @@ const Product = () => {
   }, [])
 
   return (
-    <div className="p-5">
-      <div className="flex flex-row gap-4">
+    <div className="bg-[#f2f2f2] pb-5">
+      <section
+        className="bg-center bg-no-repeat bg-[url('/img/aboutus.jpg')] bg-gray-400 bg-blend-multiply"
+        style={{ height: '350px', width: '100%' }}
+      >
+        <div className="px-4 mx-auto max-w-screen-xl text-center py-24">
+          <h1 className="text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center">
+            Projelerimiz
+          </h1>
+        </div>
+      </section>
+
+      <div className="flex flex-row gap-4 mt-5">
         <ScrollToTop />
-        <Card className="flex-1 px-10">
-          <p className="p-2">Ürünler</p>
-          <div className="grid grid-cols-3 gap-3">
+        <div className="flex-1 px-10">
+          <div className="text-left text-4xl font-extrabold slider-font p-5 text-[#364e63]">
+            Projelerimiz
+            <div className="divider"></div>
+          </div>
+          <div className="grid grid-cols-4 gap-3">
             {loading ? (
               <div>loading ....</div>
             ) : error ? (
@@ -157,8 +56,12 @@ const Product = () => {
                 <Card
                   key={item.id}
                   className="max-w-md companies-card"
+                  // style={{ backgroundColor: '#40798c' }}
                 >
-                  <h5 className="mb-3 text-center font-semibold text-gray-700 dark:text-white lg:text-xl">
+                  <h5
+                    className="mb-3 text-center font-semibold text-gray-700 dark:text-white lg:text-xl"
+                    style={{ aspectRatio: 2.9 }}
+                  >
                     {item.name}
                   </h5>
                   <div className="image-hover img-zoom-in">
@@ -172,21 +75,20 @@ const Product = () => {
                       alt=""
                     />
                   </div>
-                  <Button
-                    gradientDuoTone="greenToBlue"
-                    outline
-                  >
+                  <Button style={{ backgroundColor: '#40798c' }}>
                     <p>Ürünü Görüntüle</p>
                   </Button>
                 </Card>
               ))
             )}
           </div>
-        </Card>
-        <div className="flex-2 space-y-2">
-          <p className="p-1">Filtrele</p>
+        </div>
+        <div className="flex-shrink-0 space-y-2 px-4">
+          <div className="text-center text-4xl font-extrabold slider-font p-5 text-[#364e63]">
+            Filtrele
+            <div className="divider"></div>
+          </div>
           <Card className="max-w-md">
-            {/** Room Count */}
             <div
               className="max-w-xs"
               id="select"
@@ -207,7 +109,6 @@ const Product = () => {
                 <option>4</option>
               </Select>
             </div>
-            {/** Option Count */}
             <div>Kat sayısı</div>
             <div className="flex">
               <div className="flex items-center mr-4">
@@ -241,7 +142,6 @@ const Product = () => {
                 </label>
               </div>
             </div>
-            {/** Garaj */}
             <div>Garaj</div>
             <div className="flex items-center gap-2">
               <Checkbox
@@ -255,7 +155,6 @@ const Product = () => {
                 <p>Var</p>
               </Label>
             </div>
-            {/** Plot Square */}
             <div>Arsa Büyüklüğü</div>
             <div className="flex gap-1">
               <TextInput
@@ -273,7 +172,6 @@ const Product = () => {
                 required
               />
             </div>
-            {/** Home Square Meters */}
             <div>Ev Metrekare</div>
             <div>
               <div className="flex gap-1">

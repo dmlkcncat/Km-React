@@ -40,8 +40,8 @@ const Processes = () => {
         <Loading />
       ) : (
         <>
-          <div className="processes-svg">
-            <div className="p-5"></div>
+          <div className="processes-svg px-5">
+            <div className="p-6"></div>
             <div className="text-center text-4xl font-extrabold text-[#40798c] animate-bounce slider-font">
               Proje İşleyiş Süreci
             </div>

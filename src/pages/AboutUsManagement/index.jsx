@@ -15,36 +15,57 @@ const index = () => {
   }, [])
 
   return (
-    <div className="p-3">
-      <div className="flex flex-row gap-4">
-        <div className="container p-2 mx-auto">
-          <Card className="flex-auto h-full p-2 mx-auto">
-            <div className="mx-auto">
-              <img
-                src="/img/karbillogo.png"
-                width={180}
-                style={{ userSelect: 'none' }}
-              />
-            </div>
-            {loading ? (
-              <Loading />
-            ) : (
-              <Tabs.Group
-                aria-label="Pills"
-                style="pills"
-              >
-                {data.map((item) => (
-                  <Tabs.Item
-                    title={item.title}
-                    key={item.id}
-                  >
-                    <div dangerouslySetInnerHTML={{ __html: item.text }}></div>
-                  </Tabs.Item>
-                ))}
-              </Tabs.Group>
-            )}
-          </Card>
+    <div>
+      {/* <div className="w-full opacity-70">
+        <img
+          src="/img/aboutus.jpg"
+          style={{ userSelect: 'none', height: '350px', width: '100%' }}
+        />
+        <div className="z-10 mx-auto max-w-screen-xl text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iste illo accusantium
+          praesentium laboriosam dolorum commodi, laborum magni culpa corporis harum quia officia
+          quaerat dolor sequi architecto, aperiam dolores animi.
         </div>
+      </div> */}
+      <section
+        className="bg-center bg-no-repeat bg-[url('/img/aboutus.jpg')] bg-gray-400 bg-blend-multiply"
+        style={{ height: '350px', width: '100%' }}
+      >
+        <div className="px-4 mx-auto max-w-screen-xl text-center py-24">
+          <h1 className="text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center">
+            Hakkımızda
+          </h1>
+        </div>
+      </section>
+      <div className="flex flex-row gap-4 p-10">
+        {loading ? (
+          <Loading />
+        ) : (
+          <Tabs.Group
+            aria-label="Pills"
+            style="pills"
+            className="mx-auto"
+          >
+            {data.map((item) => (
+              <Tabs.Item
+                title={item.title}
+                key={item.id}
+                className="mx-auto"
+              >
+                <div className="w-full p-4 bg-[#40798c] text-xl font-bold slider-font text-center text-white">
+                  {item.title}
+                  <div className="aboutus-divider"></div>
+                </div>
+                <Card className="bg-[#f7f7f7] w-full">
+                  <div
+                    className="text-[#364e63] mt-8 slider-font p-10 max-w-full w-full"
+                    dangerouslySetInnerHTML={{ __html: item.text }}
+                  ></div>
+                </Card>
+              </Tabs.Item>
+            ))}
+          </Tabs.Group>
+        )}
       </div>
     </div>
   )

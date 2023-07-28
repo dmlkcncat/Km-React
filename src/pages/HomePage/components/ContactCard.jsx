@@ -1,7 +1,7 @@
-import { Button, Card, Label, TextInput, Textarea } from "flowbite-react"
-import ArtAfterBefore from "./ArtAfterBefore"
-import { BsMailbox, BsPerson } from "react-icons/bs"
-import { FiMessageCircle } from "react-icons/fi"
+import { Button, Card, Label, TextInput, Textarea } from 'flowbite-react'
+import ArtAfterBefore from './ArtAfterBefore'
+import { BsMailbox, BsPerson } from 'react-icons/bs'
+import { FiMessageCircle } from 'react-icons/fi'
 
 const ContactCard = () => {
   return (
@@ -17,10 +17,14 @@ const ContactCard = () => {
                     <Label
                       htmlFor="name"
                       value="Adınız Soyadınız"
-                      style={{ color: "#290e7e" }}
+                      style={{ color: '#290e7e' }}
                     />
                   </div>
-                  <TextInput id="name" type="text" required={true} />
+                  <TextInput
+                    id="name"
+                    type="text"
+                    required={true}
+                  />
                 </div>
                 <div>
                   <div className="mb-2 flex items-center gap-1">
@@ -28,10 +32,14 @@ const ContactCard = () => {
                     <Label
                       htmlFor="email1"
                       value="Mail Adresiniz"
-                      style={{ color: "#290e7e" }}
+                      style={{ color: '#290e7e' }}
                     />
                   </div>
-                  <TextInput id="email1" type="email1" required={true} />
+                  <TextInput
+                    id="email1"
+                    type="email1"
+                    required={true}
+                  />
                 </div>
                 <div>
                   <div className="mb-2 flex items-center gap-1">
@@ -39,10 +47,14 @@ const ContactCard = () => {
                     <Label
                       htmlFor="telephone"
                       value="Telefon Numaranız"
-                      style={{ color: "#290e7e" }}
+                      style={{ color: '#290e7e' }}
                     />
                   </div>
-                  <TextInput id="name" type="text" required={true} />
+                  <TextInput
+                    id="name"
+                    type="text"
+                    required={true}
+                  />
                 </div>
               </div>
             </div>
@@ -53,10 +65,14 @@ const ContactCard = () => {
                   <Label
                     htmlFor="name"
                     value="Mesaj"
-                    style={{ color: "#290e7e" }}
+                    style={{ color: '#290e7e' }}
                   />
                 </div>
-                <Textarea id="name" type="text" required={true} />
+                <Textarea
+                  id="name"
+                  type="text"
+                  required={true}
+                />
               </div>
             </div>
             <div className="flex justify-center">
@@ -65,12 +81,9 @@ const ContactCard = () => {
                 gradientDuoTone="greenToBlue"
                 outline
               >
-                <p>
-                  Gönder
-                </p>
+                <p>Gönder</p>
               </Button>
             </div>
-
           </form>
         </div>
       </Card>

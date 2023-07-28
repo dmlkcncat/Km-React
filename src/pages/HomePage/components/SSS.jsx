@@ -2,18 +2,15 @@ import sss from '../../../data/sss.json'
 
 const SSS = () => {
   return (
-    <div className="p-5 space-y-2">
-      <div
-        className="text-center text-4xl font-extrabold text-slate-700 mt-5 p-5"
-        style={{ textDecorationLine: 'underline', textDecorationStyle: 'solid' }}
-      >
+    <div className="p-5 space-y-2 faq-svg w-full">
+      <div className="text-center text-4xl font-extrabold text-[#364e63] mt-5 p-5 slider-font animate-bounce">
         Sıkça Sorulan Sorular
       </div>
       <div className="max-w-3xl w-full mx-auto space-y-3">
         {sss.map((item) => (
           <details
             key={item.id}
-            className="border border-slate-200 rounded pt-2 pb-3 px-3 relative open:shadow-lg mb-1 bg-slate-300 open:bg-slate-200 duration-300"
+            className="border border-slate-200 text-[#364e63] rounded pt-2 pb-3 px-3 relative open:shadow-lg mb-1 bg-slate-300 open:bg-slate-200 duration-300"
           >
             <summary className="list-none font-semibold relative text-sm cursor-pointer pr-7">
               {item.id}. {item.question}
@@ -34,12 +31,13 @@ const SSS = () => {
                 </svg>
               </div>
             </summary>
-            <p className="text-xs pt-3">
+            <p className="text-xs pt-3 text-[#364e63]">
               <p>Cevap: {item.answer}</p>
             </p>
           </details>
         ))}
       </div>
+      <div className="p-5"></div>
     </div>
   )
 }

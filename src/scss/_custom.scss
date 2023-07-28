@@ -52,8 +52,10 @@
   background-image: linear-gradient(to right, rgb(172, 199, 202) rgb(93, 146, 179));
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@400;500&display=swap");
+
 .slider-font {
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap");
+  font-family: "Raleway";
 }
 
 @media screen and (min-width: 1280px) {

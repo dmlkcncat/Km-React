@@ -66,64 +66,66 @@ const UserComments = () => {
 
   return (
     <>
-      <div className="p-10 bg-blue-100">
+      <div className="bg-[#e2e2e2] comments-svg">
         <Toaster
           position="top-center"
           reverseOrder={false}
         />
-
         <section>
-          <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
-            <div className="flex justify-between items-center mb-6">
-              <h2 className="text-lg lg:text-2xl font-bold text-blue-900 dark:text-white">
-                Bizimle deneyimlerinizi paylaşın..
-              </h2>
+          <div className="py-4 px-16 mx-auto max-w-screen-xl text-center lg:py-16 space-y-5">
+            <div className="text-center text-4xl mx-auto font-extrabold text-[#364e63] animate-bounce slider-font">
+              Bizimle deneyimlerinizi paylaşın..
             </div>
+            <div className="p-5"></div>
             <form
-              className="mb-6 mx-auto"
+              className="mb-6 mx-auto space-y-3"
               onSubmit={formik.handleSubmit}
               ref={formRef}
             >
-              <div className="space-y-2 py-2 px-4 mb-4 rounded-lg rounded-t-lg">
-                <div>
-                  <div className="mb-2 block text-start">
-                    <Label
-                      htmlFor="text"
-                      value="Adınız Soyadınız"
+              <div className="space-y-5 py-2 px-4 mb-4 rounded-lg rounded-t-lg">
+                <div className="grid grid-cols-2 gap-5">
+                  <div>
+                    <div className="mb-2 block text-start">
+                      <Label
+                        htmlFor="text"
+                        value="Ad Soyad"
+                        style={{ color: '#364e63' }}
+                      />
+                    </div>
+                    <TextInput
+                      id="text"
+                      required
+                      type="text"
+                      name="userName"
+                      feedback={formik.errors.userName}
+                      value={formik.values.userName}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
+                    {errorMessage('title')}
                   </div>
-                  <TextInput
-                    id="text"
-                    required
-                    type="text"
-                    name="title"
-                    feedback={formik.errors.title}
-                    value={formik.values.title}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                  />
-                </div>
-                {errorMessage('title')}
 
-                <div>
-                  <div className="mb-2 block text-start">
-                    <Label
-                      htmlFor="text"
-                      value="Adınız Soyadınız"
+                  <div>
+                    <div className="mb-2 block text-start">
+                      <Label
+                        htmlFor="text"
+                        value="Mesaj Konusu"
+                        style={{ color: '#364e63' }}
+                      />
+                    </div>
+                    <TextInput
+                      id="text"
+                      required
+                      type="text"
+                      name="title"
+                      feedback={formik.errors.title}
+                      value={formik.values.title}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
                     />
+                    {errorMessage('userName')}
                   </div>
-                  <TextInput
-                    id="text"
-                    required
-                    type="text"
-                    name="userName"
-                    feedback={formik.errors.userName}
-                    value={formik.values.userName}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                  />
                 </div>
-                {errorMessage('userName')}
 
                 <div
                   className="text-start"
@@ -132,12 +134,12 @@ const UserComments = () => {
                   <div className="mb-2 block">
                     <Label
                       htmlFor="comment"
-                      value="Your message"
+                      value="Mesaj"
+                      style={{ color: '#364e63' }}
                     />
                   </div>
                   <Textarea
                     id="comment"
-                    placeholder="Leave a comment..."
                     required
                     rows={4}
                     name="comment"
@@ -152,7 +154,8 @@ const UserComments = () => {
               <Button
                 disabled={loading}
                 type="submit"
-                className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800"
+                className="inline-flex items-center py-2.5 px-4 text-xs font-medium text-center rounded-lg focus:ring-4"
+                style={{ backgroundColor: '#364e63' }}
               >
                 {loading && (
                   <Loading
@@ -167,41 +170,6 @@ const UserComments = () => {
                 Gönder
               </Button>
             </form>
-            <div></div>
-            {/* {loading ? (
-              <Loading />
-            ) : (
-              <div className="h-full flex items-center justify-center">
-                <div className="grid grid-cols-3 gap-5">
-                  {items.map((item) => (
-                    <div
-                      key={item.id}
-                      className="bg-blue-200 max-w-xl rounded-2xl px-10 py-8 shadow-lg hover:shadow-2xl transition duration-500 select-none cursor-pointer scale-100 hover:scale-105 border-blue-300 border border-spacing-3"
-                    >
-                      <div className="w-14 h-14 bg-blue-500 rounded-full flex items-center justify-center font-bold text-white">
-                        <HiUserCircle />
-                      </div>
-                      <div className="mt-4">
-                        <h1 className="text-lg text-gray-700 font-semibold hover:underline">
-                          {item.title}
-                        </h1>
-                        <p className="mt-4 text-md text-gray-600">{item.comment}</p>
-                        <div className="flex justify-between items-center">
-                          <div className="mt-4 flex items-center space-x-4 py-6">
-                            <div className=""></div>
-                            <div className="text-sm font-semibold">
-                              {item.userName} •{' '}
-                              <span className="font-normal">{dateFormat(item.createdDay)}</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )} */}
-            <UserCommentList />
           </div>
         </section>
       </div>

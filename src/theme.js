@@ -139,13 +139,13 @@ export default {
       },
     },
     tab: {
-      base: 'flex flex-col gap-2',
+      base: 'flex flex-col gap-2 bg-white w-full',
       tablist: {
         base: 'flex text-center',
         styles: {
           default: 'flex-wrap border-b border-gray-200 dark:border-gray-700',
           underline: 'flex-wrap -mb-px border-b border-gray-200 dark:border-gray-700',
-          pills: 'flex-wrap font-medium text-sm text-gray-500 dark:text-gray-400 space-x-2',
+          pills: 'flex-wrap font-medium text-sm text-[#364e63] space-x-2',
           fullWidth:
             'w-full text-sm font-medium divide-x divide-gray-200 shadow grid grid-cols-4 dark:divide-gray-700 dark:text-gray-400 rounded-none',
         },
@@ -169,7 +169,7 @@ export default {
             pills: {
               base: '',
               active: {
-                on: 'rounded-lg bg-cyan-600 text-white',
+                on: 'rounded-lg bg-[#40798c] text-white',
                 off: 'rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white',
               },
             },

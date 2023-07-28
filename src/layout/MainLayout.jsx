@@ -10,7 +10,7 @@ const MainLayout = () => {
     <>
       <div className="d-flex flex-column min-vh-100">
         {navbarVisibility && <Navbar />}
-        <div className="flex-1 bg-blue-100">
+        <div className="flex-1 bg-white">
           <Outlet context={{ setNavbarVisibility, navbarVisibility }} />
         </div>
 

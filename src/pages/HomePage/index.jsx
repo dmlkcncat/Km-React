@@ -7,15 +7,15 @@ import SocialMedia from './components/SocialMedia'
 import SSS from './components/SSS'
 import Welcome from './components/Welcome'
 import { useOutletContext } from 'react-router-dom'
-import { Button } from 'flowbite-react'
 import SteelStructure from './components/AfterBefore/SteelStructure'
 import PrefabricatedBuilding from './components/AfterBefore/PrefabricatedBuilding'
+import UserCommentList from './components/UserCommentList'
 
 const index = () => {
   const { setNavbarVisibility, navbarVisibility } = useOutletContext()
 
   return (
-    <div>
+    <div className="mb-5">
       <Welcome
         setNavbarVisibility={setNavbarVisibility}
         navbarVisibility={navbarVisibility}
@@ -34,16 +34,18 @@ const index = () => {
         <ServiceCard />
       </div>
       <Processes />
-      <div className="p-5 bg-sky-100"></div>
+      {/* <div className="p-3 bg-[#f2f2f2]"></div> */}
       <UserComments />
-      <div className="sss-bg-color">
+      <div className="px-20 py-6 bg-[#e2e2e2]">
+        <UserCommentList />
+      </div>
+      <div className="bg-[#e2e2e2]">
         <SSS />
       </div>
-      <div className="p-5 sss-bg-color"></div>
-      <div className="z-0">
+
+      <div className="z-0 ">
         <SocialMedia />
       </div>
-      {/* <p className="text-center font-extrabold p-10">Referanslarımız</p> */}
       <ScrollToTop />
     </div>
   )

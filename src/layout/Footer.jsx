@@ -7,17 +7,17 @@ const FFooter = () => {
     <>
       <Footer
         style={{ borderRadius: 'none' }}
-        className="bg-gray-200"
+        className="footer-bg"
       >
-        <div className="w-full">
-          <div className="bg-gray-200">
+        <div className="w-full ">
+          <div className="">
             <img
               className="mx-auto w-20"
               src="/img/karbillogo.png"
               alt=""
             />
           </div>
-          <div className="grid w-full grid-cols-2 gap-5 px-6 py-8 md:grid-cols-4 bg-gray-200">
+          <div className="grid w-full grid-cols-2 gap-5 px-6 py-8 md:grid-cols-4">
             <div>
               <Footer.Title title="Hızlı Menü" />
               <Footer.LinkGroup col>
@@ -50,7 +50,8 @@ const FFooter = () => {
               </Footer.LinkGroup>
             </div>
           </div>
-          <div className="w-full bg-gray-300 px-4 py-6 sm:flex sm:items-center sm:justify-between">
+          <div className="divider"></div>
+          <div className="w-full px-4 py-6 sm:flex sm:items-center sm:justify-between">
             <Footer.Copyright
               by="KOBİZON PDM"
               href="#"

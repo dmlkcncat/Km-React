@@ -20,10 +20,9 @@ navbar-element {
     margin: auto;
     border: 0;
     height: 2px;
-    width: 50%;
+    width: 100%;
     display: block;
-    background-color: rgb(78, 78, 78);
-    background-image: linear-gradient(to right, rgb(231, 231, 231), rgb(135, 135, 135), rgb(207, 207, 207));
+    background-color: rgb(223, 223, 223);
 }
 
 .logocenter {
@@ -321,36 +320,14 @@ navbar-element {
     opacity: 1;
 }
 
-.background-svg {
-    background-image: url('/svg/Polygon.svg');
-    background-repeat: no-repeat;
-    background-position: cover;
-    width: 100%;
-}
-
-.accordion-img {
-    /* background-image: url('https://static.vecteezy.com/system/resources/previews/003/594/689/non_2x/single-continuous-line-drawing-welder-with-gesture-okay-works-in-the-construction-of-building-forming-steel-frame-that-is-melted-by-fire-dynamic-one-line-draw-graphic-design-illustration-vector.jpg'); */
-    background-repeat: no-repeat;
-    background-position: 69px center;
-    background-size: contain;
-    background-image: url('/svg/accordion.svg');
-    z-index: 0;
-}
-
-.animate-bounce {
+/* .animate-bounce {
     animation: bounce 1s infinite;
-}
+} */
 
 .usercomment-animated-svg {
     background-image: url('/svg/usercomment.svg');
     background-repeat: no-repeat;
     background-position: cover;
-}
-
-.faq-svg {
-    /* background-image: url('/svg/faq.svg'); */
-    background-repeat: no-repeat;
-    background-position: initial;
 }
 
 .circle-div {
@@ -373,13 +350,6 @@ navbar-element {
     background: linear-gradient(90deg, rgba(95, 128, 217, 1) 7%, rgba(124, 115, 221, 1) 25%, rgba(98, 203, 197, 1) 51%, rgba(100, 204, 247, 1) 76%, rgba(0, 212, 255, 1) 100%);
 }
 
-/* .processes-svg {
-    background-image: url('/svg/deneme1.png');
-    background-repeat: round;
-    background-position: cover;
-    backdrop-filter: blur("5px");
-} */
-
 .processes-svg {
     background-image: url('/svg/processes.svg');
     background-repeat: no-repeat;
@@ -396,4 +366,61 @@ navbar-element {
     background-image: url('/svg/lastproject.svg');
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.comments-svg {
+    background-image: url('/svg/comments.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: linear-gradient(to bottom, #e2e2e2 0%, #f2f2f2 100%); */
+}
+
+.commentlist-svg {
+    background: linear-gradient(to bottom, #e2e2e2 0%, #f2f2f2 100%);
+}
+
+.faq-svg {
+    background-image: url('/svg/faq.svg');
+    background-repeat: round;
+    background-position: cover;
+}
+
+.contact-svg {
+    background-image: url('/svg/contact.svg');
+    background-repeat: round;
+    background-position: cover;
+}
+
+.sss-svg {
+    background-image: url('/svg/sss.svg');
+    background-repeat: round;
+    background-position: cover;
+}
+
+.footer-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/img/footer-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+    opacity: .3;
+}
+
+.footer-bg {
+    position: relative;
+    background: transparent;
+}
+
+.aboutus-divider {
+    margin: auto;
+    border: 0;
+    height: 2px;
+    width: 70%;
+    display: block;
+    background-color: #cfcfcf;
 }

@@ -1,15 +1,14 @@
-import { Button, Card } from "flowbite-react"
-import SideBarProcesses from "./components/SideBarProcesses"
-import { ProcessesService } from "../../services"
-import { useEffect, useState } from "react"
-import { getPath } from "../../utils"
-import { Loading } from "../../components/LoadingSpinner"
-import { MdArrowUpward } from "react-icons/md"
+import { Button, Card } from 'flowbite-react'
+import { ProcessesService } from '../../services'
+import { useEffect, useState } from 'react'
+import { Loading } from '../../components/LoadingSpinner'
+import { MdArrowUpward } from 'react-icons/md'
+import { generatePath } from 'react-router-dom'
 
 const index = () => {
+  const [isVisible, setIsVisible] = useState(false)
   const [loading, setLoading] = useState(true)
   const [items, setItems] = useState(false)
-  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     ProcessesService.getAll().then((res) => {
@@ -29,22 +28,32 @@ const index = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     })
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility)
+    window.addEventListener('scroll', toggleVisibility)
     return () => {
-      window.removeEventListener("scroll", toggleVisibility)
+      window.removeEventListener('scroll', toggleVisibility)
     }
   }, [])
 
   return (
-    <div className="p-5">
-      <div className="flex flex-row gap-4">
+    <div className="bg-[#f2f2f2]">
+      <section
+        className="bg-center bg-no-repeat bg-[url('/img/aboutus.jpg')] bg-gray-400 bg-blend-multiply"
+        style={{ height: '350px', width: '100%' }}
+      >
+        <div className="px-4 mx-auto max-w-screen-xl text-center py-24">
+          <h1 className="text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center">
+            Hizmetlerimiz
+          </h1>
+        </div>
+      </section>
+      <div className="flex flex-row gap-6 px-20 py-10">
         <div
-          className={`scroll-to-top ${isVisible ? "show" : ""}`}
+          className={`scroll-to-top ${isVisible ? 'show' : ''}`}
           onClick={scrollToTop}
         >
           <span>
@@ -52,21 +61,20 @@ const index = () => {
           </span>
         </div>
         <div className="flex-1">
-          {/* <BBreadCrumb /> */}
           {loading ? (
             <Loading />
           ) : (
             <div className="grid grid-cols-4 gap-4">
               {items.map((item) => (
-                <Card key={item.id}>
+                <Card key={item?.id}>
                   <div className="image-hover img-zoom-in">
                     <img
                       src={item?.firstImage}
                       alt=""
                       style={{
-                        objectFit: "cover",
-                        width: "100%",
-                        aspectRatio: "1",
+                        objectFit: 'cover',
+                        width: '100%',
+                        aspectRatio: '1',
                       }}
                     />
                   </div>
@@ -74,9 +82,8 @@ const index = () => {
                     <p className="text-center">{item?.name}</p>
                   </p>
                   <Button
-                    href={getPath("hizmetler", { id: item.id })}
-                    color="gray"
-                    pill
+                    href={generatePath('hizmetler', { id: item.id })}
+                    style={{ backgroundColor: '#40798c' }}
                   >
                     <p>Görüntüle</p>
                   </Button>
@@ -84,9 +91,6 @@ const index = () => {
               ))}
             </div>
           )}
-        </div>
-        <div className="flex-none">
-          <SideBarProcesses />
         </div>
       </div>
     </div>
