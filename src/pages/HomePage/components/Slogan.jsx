@@ -1,7 +1,6 @@
 import { useSpring, animated } from '@react-spring/web'
 import { useEffect, useRef, useState } from 'react'
 import { isInViewport } from '../../../utils'
-import SliderBnA from 'react-bna'
 
 const Slogan = () => {
   const sectionRef = useRef()

@@ -139,7 +139,7 @@ export default {
       },
     },
     tab: {
-      base: 'flex flex-col gap-2 bg-white w-full',
+      base: 'flex flex-col gap-2 bg-transparent w-3/4',
       tablist: {
         base: 'flex text-center',
         styles: {

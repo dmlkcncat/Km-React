@@ -20,11 +20,11 @@ const App = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex flex-row gap-5 p-5 justify-center mx-auto counter-svg w-full">
+        <div className="justify-center gap-5 mx-auto counter-svg w-full grid py-5 grid-cols-2 px-5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 xl:px-96 lg:px-20 md:px-20">
           {items.map((item) => (
             <Card
               key={item.id}
-              className="h-48 w-48 flex justify-center items-center circle-div transition duration-500 select-none cursor-pointer scale-100 hover:scale-105"
+              className="xl:h-48 xl:w-48 lg:h-48 lg:w-48 md:h-36 md:w-36 sm:w-24 sm:h-24 md:mx-auto sm:text-sm sm:whitespace-pre-wrap lg:mx-auto xl:mx-auto text-center flex justify-center items-center circle-div transition duration-500 select-none cursor-pointer scale-100 hover:scale-105"
               style={{ borderRadius: '100px', backgroundColor: item?.hexCode }}
             >
               <p className="text-2xl font-bold text-center text-white">

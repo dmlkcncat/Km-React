@@ -4,6 +4,7 @@ import { isInViewport } from '../../../utils'
 import { LastProjectsService } from '../../../services'
 import { Loading } from '../../../components/LoadingSpinner'
 import { Button } from 'flowbite-react'
+import { Link } from 'react-router-dom'
 
 const Product = () => {
   const sectionRef = useRef()
@@ -48,7 +49,7 @@ const Product = () => {
       >
         <div className="p-3"></div>
         <div className="text-center text-4xl font-extrabold text-[#eeeeee] animate-bounce slider-font">
-          Son Projelerimiz
+          Referanslarımız
         </div>
         <div className="p-6"></div>
         <div>
@@ -72,7 +73,12 @@ const Product = () => {
                     <div className="card__info">
                       <span className="card__category">{item.name}</span>
                       <h3 className="card__title"></h3>
-                      <span className="card__by">{item.location}</span>
+                      <span
+                        className="card__by"
+                        style={{ color: '#364e63'}}
+                      >
+                        {item.location}
+                      </span>
                     </div>
                   </article>
                 ))}
@@ -82,12 +88,10 @@ const Product = () => {
         <div className="p-10"></div>
         <div className="p-2">
           <Button
-            gradientDuoTone="greenToBlue"
-            outline
             className="items-center mx-auto text-teal-900"
-            to="/urunler"
+            style={{ backgroundColor: '#f2f2f2', color: '#364e63' }}
           >
-            Tüm Projeleri Görüntüle
+            <Link to="/urunler">Tüm Projeleri Görüntüle</Link>
           </Button>
         </div>
         <div className="p-5"></div>

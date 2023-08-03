@@ -16,6 +16,8 @@ const DetailProcessesPage = lazy(() => import('./pages/ProcessesManagement/Detai
 
 const SSSPage = lazy(() => import('./pages/SSSManagement/index'))
 
+const AfterBeforeManagement = lazy(() => import('./pages/AfterBeforeManagement/index'))
+
 /** @type {import('react-router-dom').RouteObject[]} */
 const routes = [
   {
@@ -44,9 +46,9 @@ const routes = [
         ],
       },
       {
-        path: 'hakkimizda',
+        path: 'kurumsal',
         name: 'aboutus',
-        label: 'Hakkımızda',
+        label: 'Kurumsal',
         children: [
           {
             index: true,
@@ -90,6 +92,19 @@ const routes = [
         element: <SSSPage />,
         lazy: true,
       },
+      // {
+      //   path: 'oncesonra',
+      //   name: 'oncesonra',
+      //   label: 'ÖncesiSonrası',
+      //   children: [
+      //     {
+      //       index: true,
+      //       element: <AfterBeforeManagement />,
+      //       auth: true,
+      //       lazy: true,
+      //     },
+      //   ],
+      // },
     ],
   },
 ]

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { HiOutlineArrowRight } from 'react-icons/hi'
 import ScrollToTop from '../../components/ScrollToTop'
 import { ProductService } from '../../services'
+import { getPath } from '../../utils'
 
 const Product = () => {
   const [loading, setLoading] = useState(true)
@@ -29,12 +30,18 @@ const Product = () => {
   return (
     <div className="bg-[#f2f2f2] pb-5">
       <section
-        className="bg-center bg-no-repeat bg-[url('/img/aboutus.jpg')] bg-gray-400 bg-blend-multiply"
+        className="bg-center bg-cover bg-no-repeat bg-[url('https://z500.com/wp-content/uploads/2014/03/3.jpg')] bg-gray-400 bg-blend-multiply"
         style={{ height: '350px', width: '100%' }}
       >
-        <div className="px-4 mx-auto max-w-screen-xl text-center py-24">
-          <h1 className="text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center">
-            Projelerimiz
+        <div
+          className="px-4 mx-auto max-w-screen-xl text-center py-24 h-full"
+          style={{ display: 'flex' }}
+        >
+          <h1
+            className="w-full text-center text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center"
+            style={{ display: 'flex', justifyContent: 'center' }}
+          >
+            Projeler
           </h1>
         </div>
       </section>
@@ -55,12 +62,12 @@ const Product = () => {
               products.map((item) => (
                 <Card
                   key={item.id}
-                  className="max-w-md companies-card"
+                  className="max-w-md companies-card bg-slate-50"
                   // style={{ backgroundColor: '#40798c' }}
                 >
                   <h5
                     className="mb-3 text-center font-semibold text-gray-700 dark:text-white lg:text-xl"
-                    style={{ aspectRatio: 2.9 }}
+                    style={{ aspectRatio: 3.8 }}
                   >
                     {item.name}
                   </h5>
@@ -75,7 +82,12 @@ const Product = () => {
                       alt=""
                     />
                   </div>
-                  <Button style={{ backgroundColor: '#40798c' }}>
+                  <Button
+                    gradientDuoTone="cyanToBlue"
+                    outline
+                    href={item?.path}
+                    target="_blank"
+                  >
                     <p>Ürünü Görüntüle</p>
                   </Button>
                 </Card>

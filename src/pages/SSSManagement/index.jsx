@@ -18,11 +18,17 @@ const index = () => {
   return (
     <div className="mb-5">
       <section
-        className="bg-center bg-no-repeat bg-[url('/img/aboutus.jpg')] bg-gray-400 bg-blend-multiply"
+        className="bg-center bg-cover bg-no-repeat bg-[url('https://z500.com/wp-content/uploads/2014/03/3.jpg')] bg-gray-400 bg-blend-multiply"
         style={{ height: '350px', width: '100%' }}
       >
-        <div className="px-4 mx-auto max-w-screen-xl text-center py-24">
-          <h1 className="text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center">
+        <div
+          className="px-4 mx-auto max-w-screen-xl text-center py-24 h-full"
+          style={{ display: 'flex' }}
+        >
+          <h1
+            className="w-full text-center text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center"
+            style={{ display: 'flex', justifyContent: 'center' }}
+          >
             Hakkımızda Merak Edilenler
           </h1>
         </div>
@@ -32,16 +38,9 @@ const index = () => {
         <Loading />
       ) : (
         <div className="px-6 sss-svg">
-          <div className="row-span-3">
-            {/* <div className="p-3"></div>
-            <div className="text-center text-3xl font-extrabold text-[#364e63] slider-font">
-              Hakkımızda Merak Edilenler
-            </div> */}
-            <section className="w-4/5 px-10 pb-8 pt-10 rounded-lg flex justify-between flex-row">
-              <div className="w-2/6">
-                <p className="text-xl font-semibold pr-5"></p>
-              </div>
-              <div className="w-3/4 space-y-2">
+          <div className="row-span-3 sm:justify-center sm:grid-flow-row sm:w-full">
+            <section className="px-10 pb-8 pt-10 rounded-lg flex justify-between flex-row 2xl:px-40 xl:px-40 lg:px-40 md:px-20">
+              <div className="w-full space-y-2 lg:mx-auto">
                 {items.map((item) => (
                   <details
                     key={item.id}

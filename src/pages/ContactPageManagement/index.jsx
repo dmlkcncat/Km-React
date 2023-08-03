@@ -2,12 +2,18 @@ const index = () => {
   return (
     <div className="mb-10">
       <section
-        className="bg-center bg-no-repeat bg-[url('/img/aboutus.jpg')] bg-gray-400 bg-blend-multiply"
+        className="bg-center bg-cover bg-no-repeat bg-[url('https://z500.com/wp-content/uploads/2014/03/3.jpg')] bg-gray-400 bg-blend-multiply"
         style={{ height: '350px', width: '100%' }}
       >
-        <div className="px-4 mx-auto max-w-screen-xl text-center py-24">
-          <h1 className="text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center">
-            İletişim Bilgilerimiz
+        <div
+          className="px-4 mx-auto max-w-screen-xl text-center py-24 h-full"
+          style={{ display: 'flex' }}
+        >
+          <h1
+            className="w-full text-center text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center"
+            style={{ display: 'flex', justifyContent: 'center' }}
+          >
+            İletişim
           </h1>
         </div>
       </section>

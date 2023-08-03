@@ -58,6 +58,12 @@
   font-family: "Raleway";
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Raleway:wght@400;500&display=swap");
+
+.bold-font {
+  font-family: "Montserrat";
+}
+
 @media screen and (min-width: 1280px) {
   .with-line {
     &::before {
