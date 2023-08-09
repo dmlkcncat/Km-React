@@ -4,7 +4,7 @@ import { Card } from 'flowbite-react'
 import { CountersService } from '../../../services'
 import { Loading } from '../../../components/LoadingSpinner'
 
-const App = () => {
+const Counter = () => {
   const [loading, setLoading] = useState(true)
   const [items, setItems] = useState(false)
 
@@ -20,12 +20,20 @@ const App = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div className="justify-center gap-5 mx-auto counter-svg w-full grid py-5 grid-cols-2 px-5 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 xl:px-96 lg:px-20 md:px-20">
+        <div
+          className="justify-center gap-24 mx-auto counter-svg w-full grid py-5 grid-cols-2 px-5 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 xl:px-96 md:px-20"
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}
+        >
           {items.map((item) => (
             <Card
               key={item.id}
-              className="xl:h-48 xl:w-48 lg:h-48 lg:w-48 md:h-36 md:w-36 sm:w-24 sm:h-24 md:mx-auto sm:text-sm sm:whitespace-pre-wrap lg:mx-auto xl:mx-auto text-center flex justify-center items-center circle-div transition duration-500 select-none cursor-pointer scale-100 hover:scale-105"
-              style={{ borderRadius: '100px', backgroundColor: item?.hexCode }}
+              className="xl:h-48 xl:w-48 lg:h-48 lg:w-48 md:h-36 md:w-36 sm:w-full sm:h-auto md:mx-auto sm:text-sm sm:whitespace-pre-wrap lg:mx-auto xl:mx-auto text-center flex justify-center items-center"
+              style={{
+                backgroundImage: `url(${item.hexCode})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
             >
               <p className="text-2xl font-bold text-center text-white">
                 <Counter
@@ -42,4 +50,4 @@ const App = () => {
   )
 }
 
-export default App
+export default Counter

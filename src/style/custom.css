@@ -352,11 +352,11 @@ navbar-element {
     background-position: cover;
 }
 
-.counter-svg {
+/* .counter-svg {
     background-image: url('/svg/counter.svg');
     background-repeat: no-repeat;
     background-size: cover;
-}
+} */
 
 .lastproject-svg {
     background-image: url('/svg/lastproject.svg');
