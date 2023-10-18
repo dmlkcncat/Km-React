@@ -1,9 +1,8 @@
-import { Button, Card } from 'flowbite-react'
+import { Card } from 'flowbite-react'
 import { ProcessesService } from '../../services'
 import { useEffect, useState } from 'react'
 import { Loading } from '../../components/LoadingSpinner'
 import { MdArrowUpward } from 'react-icons/md'
-import { generatePath } from 'react-router-dom'
 
 const index = () => {
   const [isVisible, setIsVisible] = useState(false)
@@ -41,22 +40,15 @@ const index = () => {
 
   return (
     <div className="bg-[#f2f2f2]">
-      <section
-        className="bg-center bg-cover bg-no-repeat bg-[url('https://z500.com/wp-content/uploads/2014/03/3.jpg')] bg-gray-400 bg-blend-multiply"
-        style={{ height: '350px', width: '100%' }}
+      <div
+        className="py-10 text-center text-4xl font-extrabold text-[#1d5889] slider-font relative"
+        style={{
+          fontSize: '2rem',
+        }}
       >
-        <div
-          className="px-4 mx-auto max-w-screen-xl text-center py-24 h-full"
-          style={{ display: 'flex' }}
-        >
-          <h1
-            className="w-full text-center text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center"
-            style={{ display: 'flex', justifyContent: 'center' }}
-          >
-            Hizmetler
-          </h1>
-        </div>
-      </section>
+        Hizmetler
+        <div className="absolute w-80 h-2 bg-[#b5c2ce] bottom-0 left-1/2 transform -translate-x-1/2"></div>
+      </div>
       <div className="flex flex-row gap-6 px-20 py-10">
         <div
           className={`scroll-to-top ${isVisible ? 'show' : ''}`}
@@ -73,6 +65,25 @@ const index = () => {
             <div className="grid grid-cols-4 gap-4">
               {items.map((item) => (
                 <Card key={item?.id}>
+                  <div
+                    style={{
+                      backgroundColor: '#b5c2ce',
+                      borderRadius: '10px',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      padding: '10px',
+                      fontSize: '16px',
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontSize: '12px',
+                      }}
+                    >
+                      {item?.category}
+                    </span>
+                  </div>
                   <div className="image-hover img-zoom-in">
                     <img
                       src={item?.firstImage}
@@ -85,14 +96,13 @@ const index = () => {
                     />
                   </div>
                   <p className="font-normal text-gray-700 dark:text-gray-400">
-                    <p className="text-center">{item?.name}</p>
+                    <p
+                      className="text-center"
+                      style={{ fontSize: '14px' }}
+                    >
+                      {item?.name}
+                    </p>
                   </p>
-                  <Button
-                    href={generatePath('hizmetler', { id: item.id })}
-                    style={{ backgroundColor: '#40798c' }}
-                  >
-                    <p>Görüntüle</p>
-                  </Button>
                 </Card>
               ))}
             </div>

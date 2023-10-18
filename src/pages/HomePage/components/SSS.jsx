@@ -3,7 +3,7 @@ import sss from '../../../data/sss.json'
 const SSS = () => {
   return (
     <div className="p-5 space-y-2 faq-svg w-full">
-      <div className="text-center text-4xl font-extrabold text-[#364e63] mt-5 p-5 slider-font animate-bounce">
+      <div className="text-center text-4xl font-extrabold text-[#364e63] mt-5 p-5 slider-font">
         Sıkça Sorulan Sorular
       </div>
       <div className="max-w-3xl w-full mx-auto space-y-3">
@@ -37,7 +37,6 @@ const SSS = () => {
           </details>
         ))}
       </div>
-      <div className="p-5"></div>
     </div>
   )
 }

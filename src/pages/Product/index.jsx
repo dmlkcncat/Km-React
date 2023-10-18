@@ -63,7 +63,7 @@ const Product = () => {
                 <Card
                   key={item.id}
                   className="max-w-md companies-card bg-slate-50"
-                  // style={{ backgroundColor: '#40798c' }}
+                  // style={{ backgroundColor: '#1d5889' }}
                 >
                   <h5
                     className="mb-3 text-center font-semibold text-gray-700 dark:text-white lg:text-xl"

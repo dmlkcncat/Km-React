@@ -3,7 +3,6 @@ import { UserCommentsService } from '../../../services'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { useFormik } from 'formik'
 import { CommentSchema } from '../../../validations/CommentSchema'
-import UserCommentList from './UserCommentList'
 import { Loading } from '../../../components/LoadingSpinner'
 import { toast, Toaster } from 'react-hot-toast'
 
@@ -66,19 +65,18 @@ const UserComments = () => {
 
   return (
     <>
-      <div className="bg-[#e2e2e2] comments-svg">
+      <div className="bg-[#d2dce4] comments-svg">
         <Toaster
           position="top-center"
           reverseOrder={false}
         />
         <section>
           <div className="py-4 px-16 mx-auto max-w-screen-xl text-center lg:py-16 space-y-5">
-            <div className="text-center text-4xl mx-auto font-extrabold text-[#364e63] animate-bounce slider-font">
-              Bizimle deneyimlerinizi paylaşın..
+            <div className="text-center text-4xl mx-auto font-extrabold text-[#364e63] slider-font">
+              Bizimle İletişime Geçin..
             </div>
-            <div className="p-5"></div>
             <form
-              className="mb-6 mx-auto space-y-3"
+              className="mb-6 mx-auto space-y-3 max-w-lg m-auto"
               onSubmit={formik.handleSubmit}
               ref={formRef}
             >

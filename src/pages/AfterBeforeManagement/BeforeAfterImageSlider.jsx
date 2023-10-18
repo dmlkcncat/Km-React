@@ -34,9 +34,10 @@ const BeforeAfterImageSlider = ({ beforeImage, afterImage, width, height }) => {
       className="before-after-container"
       style={{
         position: 'relative',
-        width: `${width}px`,
+        width: '100%',
         height: `${height}px`,
         overflow: 'hidden',
+        margin: '0 auto',
       }}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}

@@ -169,7 +169,7 @@ export default {
             pills: {
               base: '',
               active: {
-                on: 'rounded-lg bg-[#40798c] text-white',
+                on: 'rounded-lg bg-[#1d5889] text-white',
                 off: 'rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-white',
               },
             },

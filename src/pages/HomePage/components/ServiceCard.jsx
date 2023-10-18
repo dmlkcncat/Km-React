@@ -1,4 +1,4 @@
-import { useSpring, animated } from '@react-spring/web'
+import { useSpring } from '@react-spring/web'
 import { useEffect, useRef, useState } from 'react'
 import { isInViewport } from '../../../utils'
 import { LastProjectsService } from '../../../services'
@@ -41,27 +41,33 @@ const Product = () => {
     })
   }, [])
   return (
-    <div className="overflow-hidden lastproject-svg">
-      <div className="p-5"></div>
-      <animated.section
-        ref={sectionRef}
-        style={fadeStyles}
+    <div className="overflow-hidden">
+      <div
+        className="py-10 text-center text-4xl font-extrabold text-[#1d5889] slider-font relative"
+        style={{
+          fontSize: '2rem',
+        }}
       >
-        <div className="p-3"></div>
-        <div className="text-center text-4xl font-extrabold text-[#eeeeee] animate-bounce slider-font">
-          Referanslarımız
-        </div>
-        <div className="p-6"></div>
-        <div>
-          {loading ? (
-            <Loading />
-          ) : (
-            <section className="cards-animation mx-auto">
+        Projeler
+        <div className="absolute w-80 h-2 bg-[#b5c2ce] bottom-0 left-1/2 transform -translate-x-1/2"></div>
+      </div>
+
+      <div className="p-6"></div>
+      <div>
+        {loading ? (
+          <Loading />
+        ) : (
+          <div className="cards-animation mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
               {items &&
                 items.map((item, index) => (
-                  <article
+                  <div
                     key={item?.id}
                     className="card-animation card--1"
+                    style={{
+                      marginBottom: '1rem',
+                      minWidth: '250px',
+                    }}
                   >
                     <div className="card__img"></div>
                     <a className="card_link">
@@ -73,29 +79,22 @@ const Product = () => {
                     <div className="card__info">
                       <span className="card__category">{item.name}</span>
                       <h3 className="card__title"></h3>
-                      <span
-                        className="card__by"
-                        style={{ color: '#364e63'}}
-                      >
-                        {item.location}
-                      </span>
+                      <span className="card__by">{item.location}</span>
                     </div>
-                  </article>
+                  </div>
                 ))}
-            </section>
-          )}
-        </div>
-        <div className="p-10"></div>
-        <div className="p-2">
-          <Button
-            className="items-center mx-auto text-teal-900"
-            style={{ backgroundColor: '#f2f2f2', color: '#364e63' }}
-          >
-            <Link to="/urunler">Tüm Projeleri Görüntüle</Link>
-          </Button>
-        </div>
-        <div className="p-5"></div>
-      </animated.section>
+            </div>
+          </div>
+        )}
+      </div>
+      <div className="p-8">
+        <Button
+          className="items-center mx-auto text-teal-900"
+          style={{ backgroundColor: '#f2f2f2', color: '#364e63' }}
+        >
+          <Link to="/urunler">Tüm Projeleri Görüntüle</Link>
+        </Button>
+      </div>
     </div>
   )
 }

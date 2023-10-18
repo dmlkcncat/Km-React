@@ -16,33 +16,28 @@ const index = () => {
 
   return (
     <div>
-      {/* <div className="w-full opacity-70">
+      <section style={{ height: '350px', width: '100%', position: 'relative' }}>
         <img
-          src="/img/aboutus.jpg"
-          style={{ userSelect: 'none', height: '350px', width: '100%' }}
+          src="/img/aboutUs.jpg"
+          alt="Background Image"
+          style={{
+            userSelect: 'none',
+            height: '350px',
+            width: '100%',
+            objectFit: 'cover',
+          }}
         />
-        <div className="z-10 mx-auto max-w-screen-xl text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iste illo accusantium
-          praesentium laboriosam dolorum commodi, laborum magni culpa corporis harum quia officia
-          quaerat dolor sequi architecto, aperiam dolores animi.
-        </div>
-      </div> */}
-      <section
-        className="bg-center bg-cover bg-no-repeat bg-[url('https://z500.com/wp-content/uploads/2014/03/3.jpg')] bg-gray-400 bg-blend-multiply"
-        style={{ height: '350px', width: '100%' }}
-      >
         <div
-          className="px-4 mx-auto max-w-screen-xl text-center py-24 h-full"
-          style={{ display: 'flex' }}
+          className="bg-gray-400 bg-blend-multiply absolute top-0 left-0 w-full h-full"
+          style={{ opacity: 0.2 }}
         >
-          <h1
-            className="w-full text-center text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl slider-font items-center"
-            style={{ display: 'flex', justifyContent: 'center' }}
-          >
-            Kurumsal
-          </h1>
+          <div
+            className="px-4 mx-auto max-w-screen-xl text-center py-24 h-full"
+            style={{ display: 'flex' }}
+          ></div>
         </div>
       </section>
+
       <div className="flex flex-row gap-4 p-10 sss-svg">
         {loading ? (
           <Loading />
@@ -58,13 +53,13 @@ const index = () => {
                 key={item.id}
                 className="mx-auto"
               >
-                <div className="w-full p-4 bg-[#40798c] text-xl font-bold slider-font text-center text-white">
+                <div className="w-full p-4 bg-[#44759d] text-xl font-bold slider-font text-center text-white">
                   {item.title}
                   <div className="aboutus-divider"></div>
                 </div>
                 <Card className="bg-[#f7f7f7] w-full">
                   <div
-                    className="text-[#364e63] mt-8 slider-font p-10 max-w-full w-full"
+                    className="text-[#1d5889] mt-8 slider-font p-10 max-w-full w-full"
                     dangerouslySetInnerHTML={{ __html: item.text }}
                   ></div>
                 </Card>

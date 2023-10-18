@@ -44,7 +44,7 @@ navbar-element {
 
 
 .neon-blue-light:hover {
-    color: #0048ff;
+    color: #CFDAE3;
     text-shadow: 0 0 0.25em #efefef, 0 0 0.5em #fbfeff;
     cursor: pointer;
 }
@@ -55,7 +55,7 @@ navbar-element {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #000283;
+    background-color: #CFDAE3;
     color: #ffffff;
     border-radius: 10%;
     width: 40px;

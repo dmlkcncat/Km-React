@@ -4,7 +4,7 @@ import { Card } from 'flowbite-react'
 import { CountersService } from '../../../services'
 import { Loading } from '../../../components/LoadingSpinner'
 
-const Counter = () => {
+const App = () => {
   const [loading, setLoading] = useState(true)
   const [items, setItems] = useState(false)
 
@@ -21,21 +21,22 @@ const Counter = () => {
         <Loading />
       ) : (
         <div
-          className="justify-center gap-24 mx-auto counter-svg w-full grid py-5 grid-cols-2 px-5 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 xl:px-96 md:px-20"
-          style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}
+          className="justify-center mx-auto counter-svg w-full grid py-5 gap-16 px-4"
+          style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))' }}
         >
           {items.map((item) => (
             <Card
               key={item.id}
-              className="xl:h-48 xl:w-48 lg:h-48 lg:w-48 md:h-36 md:w-36 sm:w-full sm:h-auto md:mx-auto sm:text-sm sm:whitespace-pre-wrap lg:mx-auto xl:mx-auto text-center flex justify-center items-center"
+              className="xl:h-80 xl:w-60 lg:h-60 lg:w-40 md:h-36 md:w-36 sm:w-full sm:h-auto md:mx-auto sm:text-sm sm:whitespace-pre-wrap text-center flex flex-col justify-center items-center"
               style={{
                 backgroundImage: `url(${item.hexCode})`,
+                opacity: 0.9,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
               }}
             >
-              <p className="text-2xl font-bold text-center text-white">
+              <p className="text-4xl font-bold text-center text-[white]">
                 <Counter
                   from={1}
                   to={item?.count}
@@ -50,4 +51,4 @@ const Counter = () => {
   )
 }
 
-export default Counter
+export default App

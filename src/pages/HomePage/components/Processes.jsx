@@ -40,14 +40,20 @@ const Processes = () => {
         <Loading />
       ) : (
         <>
-          <div className="processes-svg px-5">
-            <div className="p-6"></div>
-            <div className="text-center text-4xl font-extrabold text-[#40798c] animate-bounce slider-font">
-              Proje İşleyiş Süreci
-            </div>
-            <div className="p-5"></div>
+          <div>
+            <div className="p-8"></div>
             <div
-              className="grid px-5 grid-cols-1 xl:grid-cols-5"
+              className="py-10 text-center text-4xl font-extrabold text-[#1d5889] slider-font relative"
+              style={{
+                fontSize: '2rem',
+              }}
+            >
+              Ne Yapıyoruz?
+              <div className="absolute w-80 h-2 bg-[#b5c2ce] bottom-0 left-1/2 transform -translate-x-1/2"></div>
+            </div>
+
+            <div
+              className="py-10 grid px-5 grid-cols-1 xl:grid-cols-5"
               // style={{ gridTemplateColumns: `repeat(${COL_COUNT}, 1fr)` }}
             >
               {items.map((item, index) => (

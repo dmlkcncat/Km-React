@@ -18,32 +18,32 @@ const NavbarLink = ({ to, text }) => {
 }
 
 const NNavbar = forwardRef((props, ref) => {
-  // const { type } = useAppSelector((state) => state.navbarSlice)
-  // console.log({ type })
   return (
     <div
       className="sticky top-0 z-50"
       ref={ref}
     >
       <Navbar
-        style={{ borderRadius: 'none', backgroundColor: '#f0f5ff', zIndex: 10 }}
-        // className={classNames({
-        //   "z-10 absolute bg-transparent top-0 left-0 w-full font-serif":
-        //     type == "transparent",
-        //   "bg-blue-500": type == "classic",
-        // })}
+        style={{
+          borderRadius: 'none',
+          backgroundColor: '#ffffff',
+          zIndex: 10,
+        }}
         className="shadow-lg"
         fluid={true}
       >
         <Navbar.Brand to="/navbars">
           <img
-            src="/img/karbillogo.png"
+            src="/img/logo.png"
             className="mr-3 h-6 sm:h-9"
             style={{ height: 60 }}
           />
           <a href="/">
-            <span className="self-center whitespace-nowrap text-2xl font-bold text-[#60a3cf] neon-blue-light">
-              KARBİL YAPI
+            <span className="self-center whitespace-nowrap text-2xl font-bold text-[#1d5889] neon-blue-light">
+              KM
+            </span>
+            <span className="px-2 self-center whitespace-nowrap text-2xl  text-[#acbbc8] neon-blue-light">
+              MAKİNE
             </span>
           </a>
         </Navbar.Brand>
@@ -58,16 +58,28 @@ const NNavbar = forwardRef((props, ref) => {
             text="Kurumsal"
           />
           <NavbarLink
-            to="/urunler"
-            text="Modeller"
-          />
-          <NavbarLink
             to="/hizmetler"
             text="Hizmetler"
           />
           <NavbarLink
-            to="/sss"
-            text="Merak Edilenler"
+            to="/proje"
+            text="Projeler"
+          />
+          <NavbarLink
+            to="/"
+            text="Fabrikamız"
+          />
+          <NavbarLink
+            to="/referanslar"
+            text="Referanslar"
+          />
+          <NavbarLink
+            to="/haberler"
+            text="Haberler"
+          />
+          <NavbarLink
+            to="/belgeler"
+            text="Kalite Belgelerimiz"
           />
           <NavbarLink
             to="/iletisim"

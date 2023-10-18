@@ -16,7 +16,15 @@ const DetailProcessesPage = lazy(() => import('./pages/ProcessesManagement/Detai
 
 const SSSPage = lazy(() => import('./pages/SSSManagement/index'))
 
-const AfterBeforeManagement = lazy(() => import('./pages/AfterBeforeManagement/index'))
+const NewsPage = lazy(() => import('./pages/NewsManagement'))
+
+const ReferencesPage = lazy(() => import('./pages/ReferencesManagement'))
+
+// const AfterBeforeManagement = lazy(() => import('./pages/AfterBeforeManagement/index'))
+
+const ProjectManagement = lazy(() => import('./pages/ProjectManagement/index'))
+
+const QualityCertificates = lazy(() => import('./pages/QualityCertificates/index'))
 
 /** @type {import('react-router-dom').RouteObject[]} */
 const routes = [
@@ -59,6 +67,45 @@ const routes = [
         ],
       },
       {
+        path: 'haberler',
+        name: 'news',
+        label: 'Haberler',
+        children: [
+          {
+            index: true,
+            element: <NewsPage />,
+            auth: true,
+            lazy: true,
+          },
+        ],
+      },
+      {
+        path: 'referanslar',
+        name: 'references',
+        label: 'Referanslar',
+        children: [
+          {
+            index: true,
+            element: <ReferencesPage />,
+            auth: true,
+            lazy: true,
+          },
+        ],
+      },
+      {
+        path: 'proje',
+        name: 'project',
+        label: 'Projeler',
+        children: [
+          {
+            index: true,
+            element: <ProjectManagement />,
+            auth: true,
+            lazy: true,
+          },
+        ],
+      },
+      {
         path: 'hizmetler',
         name: 'processes',
         label: 'Hizmetler',
@@ -83,6 +130,13 @@ const routes = [
         name: 'iletisim',
         label: 'İletişim',
         element: <ContactPageManagement />,
+        lazy: true,
+      },
+      {
+        path: 'belgeler',
+        name: 'belgeler',
+        label: 'Kalite Belgeleri',
+        element: <QualityCertificates />,
         lazy: true,
       },
       {
