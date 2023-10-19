@@ -18,7 +18,7 @@ const index = () => {
     <div>
       <section style={{ height: '350px', width: '100%', position: 'relative' }}>
         <img
-          src="/img/aboutUs.jpg"
+          src="/img/aboutus.jpg"
           alt="Background Image"
           style={{
             userSelect: 'none',

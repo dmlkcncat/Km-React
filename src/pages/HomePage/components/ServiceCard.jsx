@@ -92,7 +92,7 @@ const Product = () => {
           className="items-center mx-auto text-teal-900"
           style={{ backgroundColor: '#f2f2f2', color: '#364e63' }}
         >
-          <Link to="/urunler">Tüm Projeleri Görüntüle</Link>
+          <Link to="/proje">Tüm Projeleri Görüntüle</Link>
         </Button>
       </div>
     </div>

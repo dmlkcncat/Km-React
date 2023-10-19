@@ -1,5 +1,4 @@
 import { Button, Card, Label, TextInput, Textarea } from 'flowbite-react'
-import ArtAfterBefore from './ArtAfterBefore'
 import { BsMailbox, BsPerson } from 'react-icons/bs'
 import { FiMessageCircle } from 'react-icons/fi'
 

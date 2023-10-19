@@ -1,7 +1,8 @@
 import { Footer } from 'flowbite-react'
-import { BsFacebook, BsInstagram, BsTwitter } from 'react-icons/bs'
+import { BsFacebook, BsInstagram, BsLinkedin } from 'react-icons/bs'
 import { SlLocationPin } from 'react-icons/sl'
 import { FaMailBulk, FaPhoneAlt } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const FFooter = () => {
   return (
@@ -25,14 +26,14 @@ const FFooter = () => {
                 col
                 className="grid grid-cols-2 place-items-baseline"
               >
-                <Footer.Link href="#">Anasayfa</Footer.Link>
-                <Footer.Link href="#">Kurumsal</Footer.Link>
-                <Footer.Link href="#">Hizmetler</Footer.Link>
-                <Footer.Link href="#">Projeler</Footer.Link>
-                <Footer.Link href="#">Referanslar</Footer.Link>
-                <Footer.Link href="#">Haberler</Footer.Link>
-                <Footer.Link href="#">Kalite Belgeleri</Footer.Link>
-                <Footer.Link href="#">İletişim</Footer.Link>
+                <Link to="/">Anasayfa</Link>
+                <Link to="/kurumsal">Kurumsal</Link>
+                <Link to="/hizmetler">Hizmetler</Link>
+                <Link to="/proje">Projeler</Link>
+                <Link to="/referanslar">Referanslar</Link>
+                <Link to="/haberler">Haberler</Link>
+                <Link to="/belgeler">Kalite Belgeleri</Link>
+                <Link to="/iletisim">İletişim</Link>
               </Footer.LinkGroup>
             </div>
             <div>
@@ -75,20 +76,20 @@ const FFooter = () => {
               <Footer.Icon
                 className="animate-pulse"
                 style={{ color: '#CFDAE3' }}
-                href="https://www.facebook.com/serap.karadeniz.908"
+                href="https://www.facebook.com/km.makine/?locale=tr_TR"
                 icon={BsFacebook}
               />
               <Footer.Icon
                 className="animate-pulse"
                 style={{ color: '#C13584' }}
-                href="https://www.instagram.com/karbilyapicelik/"
+                href="https://www.instagram.com/kmmakine/"
                 icon={BsInstagram}
               />
               <Footer.Icon
                 className="animate-pulse"
                 style={{ color: '#00acee' }}
-                href="https://twitter.com/KarbilY"
-                icon={BsTwitter}
+                href="https://tr.linkedin.com/posts/kmmaki%CC%87ne_%C3%A7elikkonstr%C3%BCksiyon-mak%C3%BCne-ekipman-activity-7114955482972209152-Bgc2?trk=public_profile_like_view"
+                icon={BsLinkedin}
               />
             </div>
             <div className="text-center w-full sm:mr-16">

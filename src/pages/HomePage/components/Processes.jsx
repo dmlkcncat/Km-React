@@ -52,10 +52,7 @@ const Processes = () => {
               <div className="absolute w-80 h-2 bg-[#b5c2ce] bottom-0 left-1/2 transform -translate-x-1/2"></div>
             </div>
 
-            <div
-              className="py-10 grid px-5 grid-cols-1 xl:grid-cols-5"
-              // style={{ gridTemplateColumns: `repeat(${COL_COUNT}, 1fr)` }}
-            >
+            <div className="py-10 grid px-5 grid-cols-1 xl:grid-cols-5">
               {items.map((item, index) => (
                 <Fragment key={index}>
                   {[...Array(index)].map((item, key) => (

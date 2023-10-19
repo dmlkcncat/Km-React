@@ -1,11 +1,8 @@
 import { lazy, Suspense } from 'react'
 import { Loading } from './components/LoadingSpinner'
-// import { LoadingSpinner } from "./components/LoadingSpinner"
 
 const MainLayout = lazy(() => import('./layout/MainLayout'))
 const HomePage = lazy(() => import('./pages/HomePage/index'))
-
-const ProductPage = lazy(() => import('./pages/Product'))
 
 const AboutUsManagement = lazy(() => import('./pages/AboutUsManagement/index'))
 
@@ -14,13 +11,9 @@ const ContactPageManagement = lazy(() => import('./pages/ContactPageManagement/i
 const ProcessesManagement = lazy(() => import('./pages/ProcessesManagement/index'))
 const DetailProcessesPage = lazy(() => import('./pages/ProcessesManagement/DetailProcessesPage'))
 
-const SSSPage = lazy(() => import('./pages/SSSManagement/index'))
-
 const NewsPage = lazy(() => import('./pages/NewsManagement'))
 
 const ReferencesPage = lazy(() => import('./pages/ReferencesManagement'))
-
-// const AfterBeforeManagement = lazy(() => import('./pages/AfterBeforeManagement/index'))
 
 const ProjectManagement = lazy(() => import('./pages/ProjectManagement/index'))
 
@@ -39,19 +32,6 @@ const routes = [
         element: <HomePage />,
         auth: true,
         lazy: true,
-      },
-      {
-        path: 'urunler',
-        name: 'product',
-        label: 'Ürünler',
-        children: [
-          {
-            index: true,
-            element: <ProductPage />,
-            auth: true,
-            lazy: true,
-          },
-        ],
       },
       {
         path: 'kurumsal',
@@ -139,26 +119,6 @@ const routes = [
         element: <QualityCertificates />,
         lazy: true,
       },
-      {
-        path: 'sss',
-        name: 'sss',
-        label: 'sss',
-        element: <SSSPage />,
-        lazy: true,
-      },
-      // {
-      //   path: 'oncesonra',
-      //   name: 'oncesonra',
-      //   label: 'ÖncesiSonrası',
-      //   children: [
-      //     {
-      //       index: true,
-      //       element: <AfterBeforeManagement />,
-      //       auth: true,
-      //       lazy: true,
-      //     },
-      //   ],
-      // },
     ],
   },
 ]
