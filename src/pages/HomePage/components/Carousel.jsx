@@ -16,7 +16,7 @@ const Carousel = () => {
     {
       img: '/slider/1.png',
       content: 'MAKİNE & EKİPMAN MONTAJI',
-      description: 'Teknolojiyi Hareket Ettiriyoruz, Geleceği Birleştiriyoruz..',
+      description: 'Teknolojiyi Birleştiriyor, Verimliliği Yükseltiyoruz..',
     },
     {
       img: '/slider/8.jpg',

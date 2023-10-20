@@ -21,14 +21,14 @@ const index = () => {
     window.open(url, '_blank')
   }
   return (
-    <div className="mb-10">
-      <div
-        className="py-10 text-center text-4xl font-extrabold text-[#1d5889] slider-font relative"
-        style={{
-          fontSize: '2rem',
-        }}
-      >
-        Kalite Belgeleri & Sertifikalar
+    <div>
+      <div className="py-10 text-center font-extrabold text-[#1d5889] slider-font relative">
+        <h2
+          className="text-4xl md:text-5xl"
+          style={{ fontSize: '2rem' }}
+        >
+          Kalite Belgeleri & Sertifikalar
+        </h2>
         <div className="absolute w-80 h-2 bg-[#b5c2ce] bottom-0 left-1/2 transform -translate-x-1/2"></div>
       </div>
       {selectedPdfKey && (
@@ -39,7 +39,7 @@ const index = () => {
           height="500"
         />
       )}
-      <div className="py-16 grid grid-cols-4 gap-4">
+      <div className="px-16 py-16 grid grid-cols-1 gap-5 md:grid-cols-3">
         <Card>
           <div className="image-hover img-zoom-in">
             <img

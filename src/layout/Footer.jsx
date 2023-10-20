@@ -52,7 +52,9 @@ const FFooter = () => {
                     <div className="my-auto">
                       <SlLocationPin />
                     </div>
-                    <span>HAMZAFAKILI MAH, YAŞAR TETİKER BLV NO 26, 67300 KDZ/Zonguldak</span>
+                    <span>
+                      HAMZAFAKILI MAH, YAŞAR TETİKER BLV NO 26, 67300 KDZ EREGLİ/ZONGULDAK
+                    </span>
                   </div>
                   <div className="flex gap-2">
                     <div className="my-auto">

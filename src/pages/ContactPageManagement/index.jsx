@@ -32,7 +32,7 @@ const index = () => {
                   <h3 className="text-2xl font-extrabold tracking-tight leading-none text-[#364e63] md:text-2xl lg:text-2xl slider-font items-center">
                     İletişim Bilgilerimiz
                   </h3>
-                  <p>Ofis : HAMZAFAKILI MAH, YAŞAR TETİKER BLV NO 26, 67300 KDZ/Zonguldak</p>
+                  <p>Ofis : HAMZAFAKILI MAH, YAŞAR TETİKER BLV NO 26, 67300 KDZ EREGLİ/ZONGULDAK</p>
                   <p>Email: info@kmmakine.com.tr</p>
                   <p>TEL : +90 372 312 02 04</p>
                 </div>

@@ -13,7 +13,7 @@ const ReferencesManagement = () => {
         Referanslar
         <div className="absolute w-80 h-2 bg-[#b5c2ce] bottom-0 left-1/2 transform -translate-x-1/2"></div>
       </div>
-      <div className="py-16 grid grid-cols-6 gap-6">
+      <div className="px-16 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
         <Card>
           <div className="image-hover img-zoom-in">
             <img
